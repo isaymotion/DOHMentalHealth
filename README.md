@@ -98,3 +98,17 @@ The interactive case library now follows the requested ten-case curriculum. Thre
 ### Pass 6 validation
 
 Run `node tests/validate.js` and `node --check js/app.js`. Real-browser testing is still recommended for modal behavior, mobile layout, offline caching, and localStorage persistence.
+
+
+## Pass 7 — Assessment and mastery (v2.6.1)
+
+- Added an examination-mode area with source-linked single-best-answer and true/false questions, immediate-feedback practice, and a 10-question/10-minute timed exam.
+- Added short-answer rehearsal with model answer outlines and checklist-based learner self-review. Checklist scores are formative and are not validated grading.
+- Added topic-level performance summaries, missed-question review, retry-by-topic, and local JSON export/reset of assessment history.
+- Assessment history is stored in browser localStorage; no account, server, or cloud learner tracking is used.
+- Questions and explanations are grounded in the National Mental Health Strategic Plan 2019–2023, with printed and PDF page anchors. Some prompts explicitly labeled as learning interpretation rather than direct source claims.
+- Historical targets remain historical; the Plan itself is not presented as a clinical practice guideline.
+
+### Pass 7 validation
+
+Run `node tests/validate.js` to validate the case library, assessment item structure, answer keys, source page metadata, and required app assets. Browser interaction, timer behavior, and persistence should also be manually tested on the deployed GitHub Pages site.
