@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/mindplan/release2-case-schema.json",
+  "title": "MindPlan Release 2 Case Library",
+  "type": "object",
+  "required": ["schemaVersion", "contentStatus", "source", "cases"],
+  "properties": {
+    "schemaVersion": { "type": "string" },
+    "contentStatus": { "type": "string" },
+    "source": {
+      "type": "object",
+      "required": ["title", "publisher", "note"],
+      "properties": {
+        "title": { "type": "string" },
+        "publisher": { "type": "string" },
+        "note": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "level", "estimatedMinutes", "learningObjectives", "scenario", "sourceAnchors", "decisionPoints", "determinantOptions", "protectiveFactorOptions", "pillarOptions", "monitoringTask", "debrief", "reviewChecklist", "tags"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "title": { "type": "string" },
+          "level": { "type": "string", "enum": ["foundation", "intermediate", "advanced"] },
+          "estimatedMinutes": { "type": "integer", "minimum": 1 },
+          "learningObjectives": { "type": "array", "items": { "type": "string" }, "minItems": 1 },
+          "scenario": { "type": "string" },
+          "sourceAnchors": { "type": "array", "items": { "type": "object", "required": ["claim", "label", "citation"] } },
+          "decisionPoints": { "type": "array", "items": { "type": "object", "required": ["id", "prompt", "choices"], "properties": { "choices": { "type": "array", "items": { "type": "object", "required": ["id", "text", "feedback", "rating", "nextStep"] } } } }, "minItems": 1 },
+          "determinantOptions": { "type": "array" },
+          "protectiveFactorOptions": { "type": "array" },
+          "pillarOptions": { "type": "array" },
+          "monitoringTask": { "type": "object" },
+          "debrief": { "type": "object" },
+          "reviewChecklist": { "type": "array", "items": { "type": "string" } },
+          "tags": { "type": "array", "items": { "type": "string" } }
+        },
+        "additionalProperties": true
+      }
+    }
+  },
+  "additionalProperties": true
+}

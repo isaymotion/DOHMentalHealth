@@ -1,0 +1,1945 @@
+{
+  "schemaVersion": "1.1.0",
+  "contentStatus": "pass-5-ten-case-curriculum",
+  "source": {
+    "title": "National Mental Health Strategic Plan 2019–2023",
+    "publisher": "Philippine Council for Mental Health",
+    "note": "Source PDF is supplied separately and is not redistributed in this repository."
+  },
+  "cases": [
+    {
+      "id": "missed-follow-up",
+      "title": "The Missed Follow-up",
+      "level": "foundation",
+      "estimatedMinutes": 12,
+      "tags": [
+        "services",
+        "access",
+        "continuity",
+        "SDoMH",
+        "monitoring"
+      ],
+      "learningObjectives": [
+        "Map access barriers across individual, community, and service-system levels.",
+        "Propose coordinated service-access improvements and identify relevant stakeholders.",
+        "Choose a measure of service access and explain a limitation."
+      ],
+      "disclaimer": "Fictional educational scenario. This activity applies the Strategic Plan's policy framework; it is not a clinical practice guideline or a substitute for local referral protocols.",
+      "scenario": "A fictional adult living in a provincial municipality misses a scheduled follow-up after an initial contact with a mental health service. The person says travel costs and time away from work made the visit difficult. A family member is supportive, but the local health worker is unsure which nearby services can accept referrals and how follow-up is tracked.",
+      "contextNotes": [
+        "The missed visit is a scenario fact; do not infer non-adherence, diagnosis, risk level, or the reason for the initial contact.",
+        "The case does not specify the person's clinical condition, the local service inventory, or current local referral protocols. Learners should identify what must be clarified rather than invent it."
+      ],
+      "sourceAnchors": [
+        {
+          "claim": "The Plan describes a community-based approach and identifies issues including accessibility, integration of mental health services at levels up to the barangay, sustainability, referral-related capacity, and community-level protocols.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "34–36",
+            "pdfPages": "48–50",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan's service-delivery outcome includes improved access to mental health services at all levels of care and proposes monitoring the proportion of LGUs providing mental health services.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "35",
+            "pdfPages": "49",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "mf-d1",
+          "prompt": "What is the most useful first systems-level step before designing a response?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Assume the person is unwilling to engage and close the referral.",
+              "feedback": "This makes an unsupported assumption about the person and does not investigate the access barriers described in the scenario.",
+              "rating": "needs-reconsideration",
+              "nextStep": "mf-d2"
+            },
+            {
+              "id": "b",
+              "text": "Clarify the person's stated barriers and map the actual local service and referral options.",
+              "feedback": "Strong starting point: it separates the person's reported barriers from unknowns in the local service system. The Plan identifies accessibility, integration, and community-level service issues as areas for action.",
+              "rating": "strong",
+              "nextStep": "mf-d2"
+            },
+            {
+              "id": "c",
+              "text": "Create a new specialist clinic immediately, without checking existing services.",
+              "feedback": "A new clinic may not be feasible or necessary. The scenario first calls for understanding existing services, referral routes, and barriers. The Plan does not establish that a new clinic is the required response here.",
+              "rating": "developing",
+              "nextStep": "mf-d2"
+            }
+          ]
+        },
+        {
+          "id": "mf-d2",
+          "prompt": "Which response best reflects a multi-level approach to the missed follow-up?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Focus only on reminding the person about the next appointment.",
+              "feedback": "A reminder may help, but by itself it does not address reported travel/time barriers or the worker's uncertainty about referral pathways.",
+              "rating": "developing",
+              "nextStep": "mf-planner"
+            },
+            {
+              "id": "b",
+              "text": "Explore feasible follow-up options with the person, clarify referral contacts, and coordinate with relevant local services.",
+              "feedback": "This combines person-centered clarification with service-system coordination. The specific pathway must be confirmed locally; the Plan supports the broad emphasis on access and integrated community-based services.",
+              "rating": "strong",
+              "nextStep": "mf-planner"
+            },
+            {
+              "id": "c",
+              "text": "Refer every missed follow-up directly to a tertiary hospital.",
+              "feedback": "This assumes a universal pathway not established by the scenario or the source. The appropriate referral depends on needs, available services, and local protocols.",
+              "rating": "needs-reconsideration",
+              "nextStep": "mf-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "cost-time",
+          "level": "individual-interpersonal",
+          "label": "Travel cost and time away from work",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "support",
+          "level": "individual-interpersonal",
+          "label": "Supportive family member",
+          "kind": "protective-cue"
+        },
+        {
+          "id": "referral-clarity",
+          "level": "service-system",
+          "label": "Unclear referral contacts or pathways",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "service-map",
+          "level": "community",
+          "label": "Unknown availability and geographic reach of local services",
+          "kind": "information-gap"
+        },
+        {
+          "id": "protocol",
+          "level": "policy-governance",
+          "label": "Need to verify local protocols and coordination arrangements",
+          "kind": "information-gap"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "family-support",
+          "label": "A family member is described as supportive.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "existing-contact",
+          "label": "There has already been an initial contact with a service.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "services",
+          "label": "Services",
+          "exampleAction": "Map existing service levels and referral options; explore feasible follow-up arrangements with the person.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Clarify responsibility for referral coordination and confirm local protocols with the appropriate service leads.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0
+          ]
+        },
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Determine whether missed follow-up and referral completion can be measured using available, appropriate data.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            1
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a measure that would help assess whether access or continuity is improving. State its numerator, denominator if relevant, data source, and one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "referral-completion",
+            "label": "Proportion of referrals with a documented outcome within a defined period",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed for this exercise; not quoted as a Plan indicator."
+          },
+          {
+            "id": "lgu-service-coverage",
+            "label": "Proportion of LGUs providing mental health services",
+            "labelType": "source-indicator",
+            "note": "The Plan lists this as a service-delivery outcome indicator; its 2020–2023 targets are historical."
+          }
+        ],
+        "limitationsPrompt": "What might be missing from the data (for example, undocumented referrals, people unable to access services, or differences between areas)?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "Do not treat a missed appointment as proof of unwillingness; use the stated reasons and clarify unknowns.",
+          "Access barriers can span personal circumstances, geography, service availability, and coordination.",
+          "The Plan supports community-based and integrated services, but the exact local pathway must be verified rather than invented.",
+          "A proposed case-level indicator must be distinguished from indicators explicitly listed in the Plan."
+        ],
+        "commonPitfalls": [
+          "Assuming a diagnosis, risk level, or motivation not given in the scenario.",
+          "Choosing an intervention before mapping local services.",
+          "Presenting a suggested indicator as if it were an official Plan indicator.",
+          "Treating 2019–2023 targets as current performance."
+        ],
+        "reflectionQuestion": "What additional information would you need before recommending a specific local referral pathway?"
+      },
+      "reviewChecklist": [
+        "I separated scenario facts from assumptions.",
+        "I identified at least one barrier and one protective factor.",
+        "I considered both service-level and coordination actions.",
+        "I proposed a measurable indicator and named a limitation."
+      ]
+    },
+    {
+      "id": "barangay-referral-gap",
+      "title": "The Barangay Referral Gap",
+      "level": "foundation",
+      "estimatedMinutes": 12,
+      "tags": [
+        "barangay",
+        "referral-systems",
+        "community-based-care",
+        "coordination",
+        "SDoMH"
+      ],
+      "learningObjectives": [
+        "Map the local referral-network questions that need to be answered before a pathway is proposed.",
+        "Identify the roles of community workers and service contacts without inventing mandates.",
+        "Choose a feasible way to monitor referral connection and identify its limitations."
+      ],
+      "disclaimer": "Fictional educational scenario. This activity applies the Strategic Plan's policy framework; it is not a clinical practice guideline or a substitute for local referral protocols.",
+      "scenario": "A fictional barangay health worker meets a community member who asks for mental health support. The worker wants to help but does not have a current list of services, eligibility information, contact details, or a clear way to confirm whether a referral was received. The community member’s specific clinical needs and the local service inventory have not been established.",
+      "contextNotes": [
+        "The scenario does not specify a diagnosis, urgency, risk level, or a particular referral destination.",
+        "The worker’s uncertainty is a system information gap, not evidence that no services exist. Confirm local service availability, contact points, eligibility, and current protocols before recommending a specific route."
+      ],
+      "sourceAnchors": [
+        {
+          "claim": "The Plan describes a community-based approach and identifies issues including accessibility, integration of mental health services at levels up to the barangay, sustainability, referral-related capacity, and community-level protocols.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "34–36",
+            "pdfPages": "48–50",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan's service-delivery outcome includes improved access to mental health services at all levels of care and proposes monitoring the proportion of LGUs providing mental health services.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "35",
+            "pdfPages": "49",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "br-d1",
+          "prompt": "What should the worker and local team do first to address the referral gap?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Tell the person to attend the nearest hospital without checking local options or needs.",
+              "feedback": "This assumes a suitable destination and route without enough information. The first systems task is to verify available services and local procedures.",
+              "rating": "needs-reconsideration",
+              "nextStep": "br-d2"
+            },
+            {
+              "id": "b",
+              "text": "Map current services and contacts, confirm referral criteria and protocols, and identify who maintains the information.",
+              "feedback": "Strong systems reasoning: it addresses the known information gap while leaving local responsibilities and the appropriate pathway to be verified.",
+              "rating": "strong",
+              "nextStep": "br-d2"
+            },
+            {
+              "id": "c",
+              "text": "Create a new referral form before finding out how referrals currently work.",
+              "feedback": "A new form may duplicate existing processes. First understand current services, information flows, and gaps.",
+              "rating": "developing",
+              "nextStep": "br-d2"
+            }
+          ]
+        },
+        {
+          "id": "br-d2",
+          "prompt": "Which monitoring approach would best help the team learn whether the referral network is functioning?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Count how many referral directories were printed.",
+              "feedback": "This measures an output, not whether the directory is current or whether referrals connect people to services.",
+              "rating": "developing",
+              "nextStep": "br-planner"
+            },
+            {
+              "id": "b",
+              "text": "Pilot a privacy-conscious referral log with a defined follow-up status and review missing records.",
+              "feedback": "Strong learning interpretation: it links monitoring to referral process performance while requiring appropriate data handling and local feasibility checks.",
+              "rating": "strong",
+              "nextStep": "br-planner"
+            },
+            {
+              "id": "c",
+              "text": "Assume all referrals were completed if a worker gave the person a phone number.",
+              "feedback": "Providing information does not establish that contact was made or a service was accessed.",
+              "rating": "needs-reconsideration",
+              "nextStep": "br-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "no-service-map",
+          "level": "community",
+          "label": "No current service and contact map is available to the worker",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "referral-criteria",
+          "level": "service-system",
+          "label": "Eligibility and referral criteria are not known",
+          "kind": "information-gap"
+        },
+        {
+          "id": "followup-loop",
+          "level": "service-system",
+          "label": "No described process to confirm whether a referral was received",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "protocol-unknown",
+          "level": "policy-governance",
+          "label": "Current local protocol and responsibility for updates must be verified",
+          "kind": "information-gap"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "worker-engaged",
+          "label": "A community health worker is actively seeking a clearer process.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "referral-opportunity",
+          "label": "The identified gap creates an opportunity to map existing services before designing a new system.",
+          "labelType": "learning-interpretation"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "services",
+          "label": "Services",
+          "exampleAction": "Confirm existing service levels, eligibility, contact details, and locally approved referral steps.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Agree who validates and updates the directory and how gaps are escalated, subject to local mandates.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0
+          ]
+        },
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Pilot a proportionate way to document referral status and review incomplete records.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            1
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a measure of referral-network function. Define numerator/denominator if relevant, a feasible data source, and one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "referral-status",
+            "label": "Proportion of documented referrals with a recorded outcome within a defined period",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed for this fictional exercise; not presented as an official Plan indicator."
+          },
+          {
+            "id": "directory-review",
+            "label": "Proportion of listed services whose contact details were verified during the review period",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed process measure for this exercise."
+          }
+        ],
+        "limitationsPrompt": "Who may be missing from the referral log, and how might incomplete documentation distort the measure?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "A referral gap may reflect missing information or coordination; it does not prove that no services exist.",
+          "Map and verify local services, eligibility, contact points, and protocols before proposing a pathway.",
+          "Referral completion measures are proposed learning indicators unless explicitly listed in the Plan."
+        ],
+        "commonPitfalls": [
+          "Inventing a universal referral destination.",
+          "Treating a directory or phone number as proof of access.",
+          "Collecting identifiable information without confirming appropriate local safeguards."
+        ],
+        "reflectionQuestion": "Who should validate and maintain the referral map, and how will the team know whether the pathway works?"
+      },
+      "reviewChecklist": [
+        "I distinguished missing information from absence of services.",
+        "I identified local details and protocols that must be verified.",
+        "I proposed a referral process measure and named a limitation."
+      ]
+    },
+    {
+      "id": "school-campaign",
+      "title": "The School Campaign",
+      "level": "foundation",
+      "estimatedMinutes": 12,
+      "tags": [
+        "promotion",
+        "prevention",
+        "literacy",
+        "participation",
+        "evaluation"
+      ],
+      "learningObjectives": [
+        "Distinguish a one-off awareness activity from a broader promotion and prevention approach.",
+        "Identify stakeholders and participation opportunities, including people with lived experience.",
+        "Select measures aligned with mental health literacy and intended practices."
+      ],
+      "disclaimer": "Fictional educational scenario. This activity applies the Strategic Plan's promotion and prevention framework; it is not a school clinical protocol.",
+      "scenario": "A fictional public secondary school proposes a single mental health awareness assembly after teachers report that students often use stigmatizing language. The planning group includes school staff and a local community partner, but students and people with lived experience have not yet been consulted. The school has not defined how it will assess whether the activity makes a difference.",
+      "contextNotes": [
+        "The scenario does not establish the prevalence of stigma, student diagnoses, the availability of school counselors, or any safeguarding procedure.",
+        "Any proposed involvement of students or people with lived experience should be voluntary, respectful, and designed with appropriate safeguards; detailed safeguarding rules are not supplied by this Plan excerpt."
+      ],
+      "sourceAnchors": [
+        {
+          "claim": "The Plan's promotion and prevention pillar seeks improved mental health and wellbeing practices in schools, workplaces, and communities.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "27",
+            "pdfPages": "41",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan identifies improved mental health literacy and participation by people with lived experience as outputs/activities in the promotion and prevention section.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "27–28",
+            "pdfPages": "41–42",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan discusses baseline knowledge, beliefs, attitudes, and practices and the use of research to inform a national communication plan.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "27–28",
+            "pdfPages": "41–42",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "sc-d1",
+          "prompt": "What is the strongest next planning step before finalizing the assembly?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Proceed with the assembly and use attendance as the only measure of success.",
+              "feedback": "Attendance can measure reach, but it cannot by itself show whether knowledge, attitudes, or practices changed. The Plan discusses baseline knowledge, beliefs, attitudes, and practices.",
+              "rating": "developing",
+              "nextStep": "sc-d2"
+            },
+            {
+              "id": "b",
+              "text": "Clarify the intended change, consult relevant stakeholders, and plan how to assess it.",
+              "feedback": "Strong choice: it connects activity design to participation and evaluation rather than assuming a single event is sufficient. Specific measures should be proportionate and feasible for the school.",
+              "rating": "strong",
+              "nextStep": "sc-d2"
+            },
+            {
+              "id": "c",
+              "text": "Avoid consulting students or people with lived experience because staff already know the issue.",
+              "feedback": "This excludes perspectives that may improve relevance and participation. The Plan explicitly includes people with lived experience in mental health policy, strategy, law, and service development/implementation activities; applying this principle to this school scenario is a learning interpretation.",
+              "rating": "needs-reconsideration",
+              "nextStep": "sc-d2"
+            }
+          ]
+        },
+        {
+          "id": "sc-d2",
+          "prompt": "Which evaluation approach best fits the stated aim of reducing stigmatizing language?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Measure only how many people attended.",
+              "feedback": "Useful for reach, but not enough to assess a change in knowledge, attitudes, beliefs, or reported practices.",
+              "rating": "developing",
+              "nextStep": "sc-planner"
+            },
+            {
+              "id": "b",
+              "text": "Select a feasible, respectful measure related to the intended change and consider a baseline or comparison over time.",
+              "feedback": "Strong reasoning. The Plan discusses establishing baseline knowledge, beliefs, attitudes, and practices and using research to inform communication strategies. The exact school-level measure is a local design choice, not prescribed by the Plan.",
+              "rating": "strong",
+              "nextStep": "sc-planner"
+            },
+            {
+              "id": "c",
+              "text": "Claim the campaign reduced stigma if participants say they enjoyed it.",
+              "feedback": "Enjoyment or satisfaction does not establish a reduction in stigma. Choose a measure aligned with the intended outcome and avoid claiming causation without adequate evidence.",
+              "rating": "needs-reconsideration",
+              "nextStep": "sc-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "stigmatizing-language",
+          "level": "individual-interpersonal",
+          "label": "Stigmatizing language reported by teachers",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "student-voice",
+          "level": "community",
+          "label": "Students have not yet been consulted",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "lived-experience-voice",
+          "level": "community",
+          "label": "People with lived experience have not yet been consulted",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "evaluation-gap",
+          "level": "service-system",
+          "label": "No evaluation plan or baseline has been defined",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "school-context",
+          "level": "policy-governance",
+          "label": "Need to align the activity with relevant school policies and responsibilities",
+          "kind": "information-gap"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "staff-engagement",
+          "label": "School staff have identified a concern and initiated planning.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "community-partner",
+          "label": "A local community partner is part of the planning group.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "promotion",
+          "label": "Promotion and Prevention",
+          "exampleAction": "Design an age-appropriate activity with an explicit learning or practice objective, rather than relying only on a one-time event.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1,
+            2
+          ]
+        },
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Clarify school roles and involve relevant stakeholders in planning and review; verify local school requirements separately.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            1
+          ]
+        },
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Establish a feasible baseline and follow-up measure related to the intended change, with a note on limitations.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            2
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a measure related to the intended change. Distinguish reach (who attended) from an outcome (what may have changed), and state one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "attendance",
+            "label": "Number or proportion of intended participants reached",
+            "labelType": "proposed-learning-indicator",
+            "note": "Measures reach, not change in stigma or literacy."
+          },
+          {
+            "id": "knowledge-attitude",
+            "label": "Change in a defined knowledge, belief, attitude, or practice measure",
+            "labelType": "learning-interpretation",
+            "note": "Consistent with the Plan's discussion of baseline knowledge, beliefs, attitudes, and practices; the specific school instrument is not specified by the Plan."
+          }
+        ],
+        "limitationsPrompt": "How could response bias, small sample size, social desirability, or lack of a comparison group affect interpretation?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "Begin with the intended change, not merely the activity format.",
+          "Include relevant voices in planning; the Plan specifically describes participation by people with lived experience in mental health policy and service processes.",
+          "Attendance is a reach measure and does not demonstrate an outcome by itself.",
+          "Use feasible measures and be cautious about causal claims."
+        ],
+        "commonPitfalls": [
+          "Equating a one-time event with sustained change.",
+          "Treating satisfaction or attendance as proof of reduced stigma.",
+          "Consulting stakeholders only after decisions have already been made.",
+          "Presenting a proposed school-level measure as an official Plan indicator."
+        ],
+        "reflectionQuestion": "How would you involve students and people with lived experience in a way that is meaningful, voluntary, and respectful?"
+      },
+      "reviewChecklist": [
+        "I stated the intended change before choosing an activity.",
+        "I identified relevant stakeholders who should be involved.",
+        "I distinguished reach from outcome measurement.",
+        "I identified at least one limitation of the proposed measure."
+      ]
+    },
+    {
+      "id": "person-behind-policy",
+      "title": "The Person Behind the Policy",
+      "level": "intermediate",
+      "estimatedMinutes": 14,
+      "tags": [
+        "lived-experience",
+        "participation",
+        "rights",
+        "governance",
+        "co-design"
+      ],
+      "learningObjectives": [
+        "Distinguish meaningful participation from token consultation.",
+        "Propose accessible, voluntary ways for people with lived experience to shape planning and review.",
+        "Identify safeguards and local processes that need clarification."
+      ],
+      "disclaimer": "Fictional educational scenario. This activity applies the Strategic Plan's promotion and prevention framework; it is not a school clinical protocol.",
+      "scenario": "A fictional local mental health planning group invites two people with lived experience to a meeting after most program priorities and activities have already been drafted. They are given only a few minutes to comment, are not told how their input will be used, and have no clear way to review the final plan. The group wants to demonstrate participation but has not agreed on a process.",
+      "contextNotes": [
+        "The scenario does not specify the participants’ preferences, compensation arrangements, accessibility needs, or local participation policy. Ask rather than assume.",
+        "The Plan’s participation principle supports involving people with lived experience; the specific co-design methods suggested here are learning interpretations, not quoted procedures from the Plan."
+      ],
+      "sourceAnchors": [
+        {
+          "claim": "The Plan's promotion and prevention pillar seeks improved mental health and wellbeing practices in schools, workplaces, and communities.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "27",
+            "pdfPages": "41",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan identifies improved mental health literacy and participation by people with lived experience as outputs/activities in the promotion and prevention section.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "27–28",
+            "pdfPages": "41–42",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan discusses baseline knowledge, beliefs, attitudes, and practices and the use of research to inform a national communication plan.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "27–28",
+            "pdfPages": "41–42",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "pb-d1",
+          "prompt": "Which change would most improve the quality of participation?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Keep the agenda unchanged and record that lived-experience representatives attended.",
+              "feedback": "Attendance documents presence but does not show whether participants had a meaningful opportunity to influence decisions.",
+              "rating": "developing",
+              "nextStep": "pb-d2"
+            },
+            {
+              "id": "b",
+              "text": "Invite input before priorities are finalized, clarify decision points, offer accessible participation options, and report back on how input was used.",
+              "feedback": "Strong learning interpretation: it creates a route for influence and feedback while requiring the group to ask participants what would make participation accessible and appropriate.",
+              "rating": "strong",
+              "nextStep": "pb-d2"
+            },
+            {
+              "id": "c",
+              "text": "Ask one participant to speak for all people with lived experience.",
+              "feedback": "One person cannot be assumed to represent all perspectives. The group should avoid tokenism and clarify the scope of each participant’s contribution.",
+              "rating": "needs-reconsideration",
+              "nextStep": "pb-d2"
+            }
+          ]
+        },
+        {
+          "id": "pb-d2",
+          "prompt": "What is the best way to show that participation affected the planning process?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Publish a list of attendees only.",
+              "feedback": "This records attendance but not how input influenced the plan.",
+              "rating": "developing",
+              "nextStep": "pb-planner"
+            },
+            {
+              "id": "b",
+              "text": "Maintain a decision log showing themes raised, the group’s response, and items changed or not changed with reasons.",
+              "feedback": "Strong learning interpretation: a decision log makes the response to input visible without promising that every suggestion must be adopted.",
+              "rating": "strong",
+              "nextStep": "pb-planner"
+            },
+            {
+              "id": "c",
+              "text": "Promise that every recommendation will be adopted before feasibility is assessed.",
+              "feedback": "This creates an unsupported guarantee. Meaningful participation includes transparent consideration and response, not automatic acceptance of every proposal.",
+              "rating": "needs-reconsideration",
+              "nextStep": "pb-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "late-invitation",
+          "level": "policy-governance",
+          "label": "Lived-experience input is invited after priorities are largely drafted",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "unclear-influence",
+          "level": "policy-governance",
+          "label": "The decision points and influence of input are not explained",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "accessibility-unknown",
+          "level": "community",
+          "label": "Participants’ accessibility and participation preferences are unknown",
+          "kind": "information-gap"
+        },
+        {
+          "id": "feedback-loop",
+          "level": "service-system",
+          "label": "No described process to report back on how input was used",
+          "kind": "scenario-cue"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "invitation",
+          "label": "The planning group has invited people with lived experience to participate.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "process-change",
+          "label": "The group is open to improving how participation is organized.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Clarify when input is sought, which decisions are open, and how the group will respond.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            1
+          ]
+        },
+        {
+          "id": "promotion",
+          "label": "Promotion and Prevention",
+          "exampleAction": "Consider lived-experience perspectives when developing relevant mental health literacy or promotion activities.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Use a proportionate decision log to track input and the documented response.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            2
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a process measure of meaningful participation. Define numerator/denominator if relevant and one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "decision-response",
+            "label": "Proportion of agenda items receiving lived-experience input with a documented response",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed learning indicator; not an official Plan indicator."
+          },
+          {
+            "id": "early-involvement",
+            "label": "Proportion of planning stages where lived-experience input was sought before decisions were finalized",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed learning indicator; requires a clear definition of a planning stage."
+          }
+        ],
+        "limitationsPrompt": "How could the measure overstate participation quality if input is recorded but has little influence?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "The Plan identifies participation of people with lived experience as a strategic concern.",
+          "Attendance alone is not evidence of meaningful influence; the group should explain what is open for input and report back.",
+          "Specific co-design processes and safeguards are learning interpretations that need local adaptation."
+        ],
+        "commonPitfalls": [
+          "Assuming one person represents every lived experience.",
+          "Inviting input only after decisions are effectively final.",
+          "Promising that all suggestions will be adopted."
+        ],
+        "reflectionQuestion": "What would participants need to know and be able to do for their contribution to be meaningful?"
+      },
+      "reviewChecklist": [
+        "I identified when and how input can influence decisions.",
+        "I proposed a transparent feedback loop.",
+        "I avoided assuming all participants share the same views or needs."
+      ]
+    },
+    {
+      "id": "rights-concern",
+      "title": "A Rights Concern",
+      "level": "intermediate",
+      "estimatedMinutes": 16,
+      "tags": [
+        "rights",
+        "participation",
+        "services",
+        "governance"
+      ],
+      "learningObjectives": [
+        "Recognize rights and participation as strategic-plan concerns.",
+        "Separate a rights-oriented planning question from legal advice.",
+        "Identify a safe way to clarify local policy and accountability."
+      ],
+      "disclaimer": "Fictional educational scenario. This exercise applies the Strategic Plan as a policy framework; it is not a clinical practice guideline, legal opinion, or description of current local service availability.",
+      "scenario": "A fictional service-planning team receives feedback that some people using local mental health services feel they are not adequately included when service improvements are discussed. The team wants to revise its feedback process, but the case provides no details about a specific incident or legal complaint.",
+      "contextNotes": "This is not a legal determination or a finding that a violation occurred. The Plan is not enough to determine the facts of a specific complaint; applicable law, current policy, and appropriate rights-protection channels must be checked.",
+      "sourceAnchors": [
+        {
+          "claim": "The Plan includes a goal that persons affected by mental health conditions can exercise the full range of human rights.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "25–26",
+            "pdfPages": "39–40",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan identifies rights protection and participation of people with lived experience as relevant to mental health policy and service development.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "23–26",
+            "pdfPages": "37–40",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "rc-d1",
+          "prompt": "What is the strongest planning response to the feedback?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Dismiss the feedback because no formal complaint has been filed.",
+              "feedback": "This prematurely excludes potentially useful feedback and does not address participation in service improvement.",
+              "rating": "needs-reconsideration",
+              "nextStep": "rc-planner"
+            },
+            {
+              "id": "b",
+              "text": "Create an accessible, respectful feedback process, involve people with lived experience voluntarily, and clarify appropriate local rights and complaint pathways.",
+              "feedback": "Strong learning interpretation: it treats participation seriously without assuming a legal finding or inventing a procedure.",
+              "rating": "strong",
+              "nextStep": "rc-planner"
+            },
+            {
+              "id": "c",
+              "text": "Conclude immediately that the service has violated a specific law and prescribe a legal remedy.",
+              "feedback": "The scenario lacks facts needed for a legal conclusion; consult applicable law and competent local channels rather than making an unsupported determination.",
+              "rating": "needs-reconsideration",
+              "nextStep": "rc-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "feedback-concern",
+          "level": "individual-interpersonal",
+          "label": "Service users report feeling insufficiently included",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "participation-gap",
+          "level": "community",
+          "label": "No described process for involving people with lived experience",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "legal-facts-unknown",
+          "level": "policy-governance",
+          "label": "No specific incident facts or legal finding are provided",
+          "kind": "information-gap"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "feedback-offered",
+          "label": "People have provided feedback that can inform improvement.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "improvement-intent",
+          "label": "The planning team is considering a process change.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Clarify accountability and applicable local feedback or rights-protection mechanisms without assuming the legal conclusion.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Services",
+          "exampleAction": "Design a respectful, accessible way to hear and use service-user feedback as a learning interpretation.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Review feedback themes in a privacy-conscious, appropriately aggregated way if feasible.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            1
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a measure aligned with the stated objective. Define the numerator and denominator if applicable, identify a feasible data source, and state one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "plan-progress",
+            "label": "Proportion of service-improvement actions that document how service-user feedback was considered.",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed for this fictional exercise; verify against local data systems and do not present as an official Plan indicator unless the source explicitly lists it."
+          },
+          {
+            "id": "documented-actions",
+            "label": "Proportion of planned actions with a documented status update",
+            "labelType": "proposed-learning-indicator",
+            "note": "Learning interpretation; not asserted to be a specific Plan indicator."
+          }
+        ],
+        "limitationsPrompt": "What might be missing, inconsistently recorded, or not comparable across locations or time?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "The Plan frames human rights as a strategic goal and includes participation in mental health planning.",
+          "The scenario does not establish that a specific legal violation occurred.",
+          "The proposed feedback measure is an educational application and needs local adaptation."
+        ],
+        "commonPitfalls": [
+          "Equating feedback with proof of a legal violation.",
+          "Dismissing concerns because a formal complaint is not described.",
+          "Inventing complaint procedures not provided in the source."
+        ],
+        "reflectionQuestion": "How can the team include service-user perspectives while protecting privacy and verifying applicable procedures?"
+      },
+      "reviewChecklist": [
+        "I treated rights and participation as relevant without making an unsupported legal finding.",
+        "I proposed an accessible participation mechanism.",
+        "I identified what must be checked locally."
+      ]
+    },
+    {
+      "id": "fragmented-local-system",
+      "title": "The Fragmented Local System",
+      "level": "intermediate",
+      "estimatedMinutes": 15,
+      "tags": [
+        "governance",
+        "coordination",
+        "LGU",
+        "accountability"
+      ],
+      "learningObjectives": [
+        "Identify coordination and accountability questions in local mental health planning.",
+        "Distinguish plan-supported governance principles from locally determined roles.",
+        "Select a practical implementation-monitoring measure."
+      ],
+      "disclaimer": "Fictional educational scenario. This exercise applies the Strategic Plan as a policy framework; it is not a clinical practice guideline, legal opinion, or description of current local service availability.",
+      "scenario": "A fictional city convenes a local mental health planning meeting. Health staff, social services, education representatives, and a civil-society group attend, but the group has not agreed who will coordinate follow-through or how decisions will be documented.",
+      "contextNotes": "The scenario does not specify the city’s current ordinances, budget, committee structure, service capacity, or formal assignment of duties. Verify current local arrangements rather than assuming them.",
+      "sourceAnchors": [
+        {
+          "claim": "The Plan describes governance as including policy-making, program planning, resource allocation, implementation, and monitoring and evaluation.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "32",
+            "pdfPages": "46",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan discusses the roles of national and local government and coordination in mental health governance.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "32–33",
+            "pdfPages": "46–47",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "fl-d1",
+          "prompt": "What should the group prioritize before announcing a new city-wide initiative?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Publish a broad pledge immediately, leaving responsibilities for later.",
+              "feedback": "A pledge can signal intent, but without named responsibilities and follow-through it is difficult to implement or monitor.",
+              "rating": "developing",
+              "nextStep": "fl-planner"
+            },
+            {
+              "id": "b",
+              "text": "Agree on a documented action plan with responsible stakeholders, dependencies, and a review process.",
+              "feedback": "Strong systems reasoning: it connects planning, implementation, coordination, and monitoring while leaving formal roles to be confirmed locally.",
+              "rating": "strong",
+              "nextStep": "fl-planner"
+            },
+            {
+              "id": "c",
+              "text": "Assign all actions to the health office without checking mandates or capacity.",
+              "feedback": "This assumes authority and capacity not established in the scenario; coordination across stakeholders may be necessary.",
+              "rating": "needs-reconsideration",
+              "nextStep": "fl-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "role-clarity",
+          "level": "policy-governance",
+          "label": "No agreed coordinator or documented responsibility",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "cross-sector",
+          "level": "community",
+          "label": "Several sectors and civil society are represented",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "capacity-gap",
+          "level": "service-system",
+          "label": "Capacity and dependencies have not been assessed",
+          "kind": "information-gap"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "multi-sector",
+          "label": "Multiple sectors and a civil-society group are already at the table.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "planning-window",
+          "label": "A planning meeting creates an opportunity to clarify next steps.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Document responsibilities, coordination arrangements, and a review process, subject to confirmation of local mandates.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Services",
+          "exampleAction": "Check whether proposed actions align with the actual service capacity and local pathway.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            1
+          ]
+        },
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Maintain a proportionate action tracker with data source and update owner.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a measure aligned with the stated objective. Define the numerator and denominator if applicable, identify a feasible data source, and state one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "plan-progress",
+            "label": "Proportion of agreed actions with an assigned lead and documented status at the agreed review date.",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed for this fictional exercise; verify against local data systems and do not present as an official Plan indicator unless the source explicitly lists it."
+          },
+          {
+            "id": "documented-actions",
+            "label": "Proportion of planned actions with a documented status update",
+            "labelType": "proposed-learning-indicator",
+            "note": "Learning interpretation; not asserted to be a specific Plan indicator."
+          }
+        ],
+        "limitationsPrompt": "What might be missing, inconsistently recorded, or not comparable across locations or time?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "Governance includes planning, resource allocation, implementation, and monitoring.",
+          "Coordination should be made operational through clear, locally verified responsibilities.",
+          "A tracking indicator is a proposed learning measure, not automatically an official Plan indicator."
+        ],
+        "commonPitfalls": [
+          "Assuming a particular LGU structure or legal duty not provided in the case.",
+          "Treating attendance at a meeting as evidence of implementation."
+        ],
+        "reflectionQuestion": "Which local policy, mandate, or existing coordination mechanism should be checked before roles are finalized?"
+      },
+      "reviewChecklist": [
+        "I identified a coordination gap and a protective factor.",
+        "I avoided inventing formal local responsibilities.",
+        "I proposed a feasible monitoring measure."
+      ]
+    },
+    {
+      "id": "funding-proposal",
+      "title": "The Funding Proposal",
+      "level": "advanced",
+      "estimatedMinutes": 16,
+      "tags": [
+        "financing",
+        "governance",
+        "feasibility",
+        "planning",
+        "monitoring"
+      ],
+      "learningObjectives": [
+        "Identify financing and governance questions that must be resolved before a proposal is presented as feasible.",
+        "Distinguish a proposed funding approach from a guaranteed or legally mandated source.",
+        "Connect resources, implementation responsibilities, and monitoring."
+      ],
+      "disclaimer": "Fictional educational scenario. This exercise applies the Strategic Plan as a policy framework; it is not a clinical practice guideline, legal opinion, or description of current local service availability.",
+      "scenario": "A fictional local mental health planning team is preparing a proposal for a multi-year community initiative. The draft lists training, community promotion, service coordination, and data improvement activities, but it has not estimated full costs, identified a confirmed funding source, clarified which office can approve expenditures, or described how recurrent costs would be sustained.",
+      "contextNotes": [
+        "No specific appropriation, grant, budget percentage, or funding entitlement is established in this scenario.",
+        "The strategic plan provides a policy and planning framework; current local budget rules, approval processes, eligible funding sources, and procurement requirements must be verified separately."
+      ],
+      "sourceAnchors": [
+        {
+          "claim": "The Plan is organized around four pillars: promotion and prevention, leadership and governance, service delivery, and information and research.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "26–27",
+            "pdfPages": "40–41",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan links outcomes, outputs, activities, indicators, and verification within its strategic and monitoring framework.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "27–38",
+            "pdfPages": "41–52",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan includes a monitoring and evaluation plan in an annex.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "79–80",
+            "pdfPages": "93–94",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "fp-d1",
+          "prompt": "What should the team do before claiming the proposal is financially feasible?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "State that the local government must allocate a fixed percentage of its budget because the Plan requires it.",
+              "feedback": "The cited strategic framework does not establish that mandatory percentage. Do not invent a funding mandate; verify applicable laws and current local rules separately.",
+              "rating": "needs-reconsideration",
+              "nextStep": "fp-planner"
+            },
+            {
+              "id": "b",
+              "text": "Cost the proposed activities, identify possible but unconfirmed funding routes, check approval authority, and show recurrent costs and contingencies.",
+              "feedback": "Strong reasoning: it distinguishes planning assumptions from confirmed resources and makes feasibility questions explicit. Local funding and approval arrangements still require verification.",
+              "rating": "strong",
+              "nextStep": "fp-planner"
+            },
+            {
+              "id": "c",
+              "text": "Submit the activity list without costing because the health need is important.",
+              "feedback": "Importance alone does not establish affordability, approval, or sustainability. The proposal needs transparent resource assumptions.",
+              "rating": "developing",
+              "nextStep": "fp-planner"
+            }
+          ]
+        },
+        {
+          "id": "fp-d2",
+          "prompt": "Which monitoring approach best links spending and implementation without overstating impact?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Report only the amount spent and treat full expenditure as proof that mental health outcomes improved.",
+              "feedback": "Expenditure is a financial/process measure; it does not by itself demonstrate improved access or population outcomes.",
+              "rating": "needs-reconsideration",
+              "nextStep": "fp-planner"
+            },
+            {
+              "id": "b",
+              "text": "Track approved resources, expenditure, delivery milestones, and relevant service or outcome indicators separately.",
+              "feedback": "Strong learning interpretation: it keeps financial implementation and intended results distinct and allows the team to note missing data and assumptions.",
+              "rating": "strong",
+              "nextStep": "fp-planner"
+            },
+            {
+              "id": "c",
+              "text": "Choose an outcome target before confirming a baseline, data source, or indicator definition.",
+              "feedback": "This risks creating a target that cannot be interpreted or verified. Define measures and check data availability before setting a defensible target.",
+              "rating": "developing",
+              "nextStep": "fp-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "costing-gap",
+          "level": "policy-governance",
+          "label": "Activities have not been costed comprehensively",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "funding-unconfirmed",
+          "level": "policy-governance",
+          "label": "No funding source is confirmed",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "approval-unknown",
+          "level": "policy-governance",
+          "label": "Approval authority and local budget rules must be checked",
+          "kind": "information-gap"
+        },
+        {
+          "id": "recurrent-costs",
+          "level": "service-system",
+          "label": "Sustainability and recurrent costs are not described",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "outcome-data",
+          "level": "information",
+          "label": "Baseline and monitoring data availability are not established",
+          "kind": "information-gap"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "draft-proposal",
+          "label": "A cross-pillar activity proposal has already been drafted.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "planning-opportunity",
+          "label": "The proposal can still be revised before feasibility is claimed.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Document cost assumptions, decision authority, possible funding routes, and unresolved approvals.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Services",
+          "exampleAction": "Prioritize service activities against documented need, capacity, and recurring resource requirements.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0
+          ]
+        },
+        {
+          "id": "promotion",
+          "label": "Promotion and Prevention",
+          "exampleAction": "Specify the intended change and resource needs for proposed promotion activities.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0
+          ]
+        },
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Link implementation and outcome measures to feasible data sources and verification.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            1,
+            2
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Select a measure that links resource implementation to delivery or intended results. Define numerator/denominator if applicable and state one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "costed-actions",
+            "label": "Proportion of prioritized actions with documented cost assumptions and a confirmed or explicitly pending funding route",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed learning measure; not an official Plan indicator."
+          },
+          {
+            "id": "milestone-status",
+            "label": "Proportion of funded or approved milestones completed by the agreed review date",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed process measure; define treatment of delayed, cancelled, and partially completed milestones."
+          }
+        ],
+        "limitationsPrompt": "How will you distinguish planned, requested, approved, committed, and actually spent resources?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "A funding proposal should make costs, authority, funding status, recurrent needs, and uncertainty explicit.",
+          "Do not infer a guaranteed funding source or mandatory local budget percentage from the Plan unless the source explicitly says so.",
+          "Expenditure and activity completion do not by themselves establish improved access or outcomes."
+        ],
+        "commonPitfalls": [
+          "Presenting possible funding as approved.",
+          "Ignoring recurrent costs and implementation capacity.",
+          "Treating expenditure as proof of impact.",
+          "Inventing a statutory allocation not established by the cited source."
+        ],
+        "reflectionQuestion": "Which assumptions must be verified before decision-makers can judge affordability and sustainability?"
+      },
+      "reviewChecklist": [
+        "I separated confirmed resources from possible or pending funding.",
+        "I identified cost, approval, and recurrent-cost questions.",
+        "I separated financial measures from service or outcome measures."
+      ]
+    },
+    {
+      "id": "disaster-affected-community",
+      "title": "The Disaster-Affected Community",
+      "level": "intermediate",
+      "estimatedMinutes": 16,
+      "tags": [
+        "disaster",
+        "community",
+        "psychosocial-support",
+        "coordination"
+      ],
+      "learningObjectives": [
+        "Apply the Plan’s attention to psychosocial support in disaster-affected communities.",
+        "Identify coordination and information needs without assuming a specific clinical pathway.",
+        "Propose a cautious monitoring approach."
+      ],
+      "disclaimer": "Fictional educational scenario. This exercise applies the Strategic Plan as a policy framework; it is not a clinical practice guideline, legal opinion, or description of current local service availability.",
+      "scenario": "After a fictional typhoon, a municipal planning team is coordinating community recovery activities. Community partners ask how mental health and psychosocial support should be reflected in the local response. The team has not yet mapped available services, referral arrangements, or the needs of different affected groups.",
+      "contextNotes": "The scenario does not establish individual diagnoses, levels of clinical risk, current service availability, or the existence of a particular local disaster protocol. Consult current local emergency and health guidance before operational decisions.",
+      "sourceAnchors": [
+        {
+          "claim": "The Plan discusses the need for psychosocial support during and after natural disasters and other calamities.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "34–36",
+            "pdfPages": "48–50",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan describes community-based and integrated approaches to mental health service delivery.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "34–36",
+            "pdfPages": "48–50",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "af-d1",
+          "prompt": "What is the most defensible first planning move?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Announce one standard intervention for every affected person without assessing context.",
+              "feedback": "This assumes uniform needs and a locally approved pathway not supplied in the scenario.",
+              "rating": "needs-reconsideration",
+              "nextStep": "af-planner"
+            },
+            {
+              "id": "b",
+              "text": "Coordinate with relevant local response and health stakeholders, map existing supports and referral options, and identify information gaps.",
+              "feedback": "Strong policy application: it uses the Plan’s disaster-support and service-coordination themes while requiring local protocols to be verified.",
+              "rating": "strong",
+              "nextStep": "af-planner"
+            },
+            {
+              "id": "c",
+              "text": "Wait until the recovery period is over before considering mental health.",
+              "feedback": "The Plan specifically discusses psychosocial support during and after calamities; postponing all consideration conflicts with that planning emphasis.",
+              "rating": "needs-reconsideration",
+              "nextStep": "af-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "service-map-gap",
+          "level": "service-system",
+          "label": "Available supports and referral arrangements have not been mapped",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "diverse-needs",
+          "level": "community",
+          "label": "Affected groups and differing needs have not been described",
+          "kind": "information-gap"
+        },
+        {
+          "id": "protocol-check",
+          "level": "policy-governance",
+          "label": "Current local emergency procedures must be checked",
+          "kind": "information-gap"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "community-partners",
+          "label": "Community partners have raised the issue.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "recovery-planning",
+          "label": "A local recovery planning process is underway.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "services",
+          "label": "Services",
+          "exampleAction": "Map available supports and locally confirmed referral arrangements; do not invent a pathway.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Coordinate with responsible local response and health stakeholders.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0
+          ]
+        },
+        {
+          "id": "promotion",
+          "label": "Promotion and Prevention",
+          "exampleAction": "Consider community-appropriate information and support as a proposed application, adapted with affected communities.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a measure aligned with the stated objective. Define the numerator and denominator if applicable, identify a feasible data source, and state one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "plan-progress",
+            "label": "Proportion of identified community support or referral options that have been verified with the responsible local service contact.",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed for this fictional exercise; verify against local data systems and do not present as an official Plan indicator unless the source explicitly lists it."
+          },
+          {
+            "id": "documented-actions",
+            "label": "Proportion of planned actions with a documented status update",
+            "labelType": "proposed-learning-indicator",
+            "note": "Learning interpretation; not asserted to be a specific Plan indicator."
+          }
+        ],
+        "limitationsPrompt": "What might be missing, inconsistently recorded, or not comparable across locations or time?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "The Plan addresses psychosocial support during and after disasters and calamities.",
+          "Local service availability and procedures need direct verification.",
+          "A coordination measure is a proposed exercise indicator, not a quoted Plan target."
+        ],
+        "commonPitfalls": [
+          "Assuming every affected person has the same needs.",
+          "Claiming a current service or referral pathway exists without checking."
+        ],
+        "reflectionQuestion": "Which local response plan and service contacts must be consulted before implementation?"
+      },
+      "reviewChecklist": [
+        "I linked the scenario to disaster-related psychosocial support.",
+        "I avoided assuming diagnosis or universal intervention needs.",
+        "I identified a local verification step."
+      ]
+    },
+    {
+      "id": "missing-data",
+      "title": "The Missing Data",
+      "level": "intermediate",
+      "estimatedMinutes": 15,
+      "tags": [
+        "information",
+        "research",
+        "data-quality",
+        "monitoring"
+      ],
+      "learningObjectives": [
+        "Identify limits of incomplete mental health service data.",
+        "Distinguish activity counts from coverage or outcome measures.",
+        "Propose a cautious data-improvement step."
+      ],
+      "disclaimer": "Fictional educational scenario. This exercise applies the Strategic Plan as a policy framework; it is not a clinical practice guideline, legal opinion, or description of current local service availability.",
+      "scenario": "A fictional provincial planning team receives a spreadsheet listing the number of mental health activities reported by several municipalities. Some municipalities did not submit data, and the spreadsheet contains no population denominator or consistent definition of an activity. Leaders ask whether the province is improving.",
+      "contextNotes": "The scenario does not establish the completeness, accuracy, comparability, or representativeness of the data. No trend or geographic comparison can be assumed from raw counts alone.",
+      "sourceAnchors": [
+        {
+          "claim": "The Plan identifies gaps in mental health information and research and calls for stronger information systems and evidence for planning.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "37–38",
+            "pdfPages": "51–52",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan’s monitoring and evaluation plan specifies indicators and modes of verification for its planned outcomes.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "79–80",
+            "pdfPages": "93–94",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "da-d1",
+          "prompt": "How should the team respond to the request for a province-wide conclusion?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Rank municipalities by raw activity counts and label the highest count as best performance.",
+              "feedback": "Raw counts may reflect population size, reporting completeness, or differing definitions; they do not by themselves establish coverage or quality.",
+              "rating": "needs-reconsideration",
+              "nextStep": "da-planner"
+            },
+            {
+              "id": "b",
+              "text": "Describe the data limitations, standardize definitions, assess completeness, and identify a suitable denominator where appropriate.",
+              "feedback": "Strong reasoning: it avoids overclaiming and makes the next steps for interpretable monitoring explicit.",
+              "rating": "strong",
+              "nextStep": "da-planner"
+            },
+            {
+              "id": "c",
+              "text": "Discard all data until a perfect information system exists.",
+              "feedback": "Incomplete data can still be described cautiously; a proportionate improvement plan may be more useful than abandoning reporting entirely.",
+              "rating": "developing",
+              "nextStep": "da-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "missing-reports",
+          "level": "service-system",
+          "label": "Some municipalities did not submit data",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "no-denominator",
+          "level": "information",
+          "label": "No population denominator or comparable definition",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "pressure-to-rank",
+          "level": "policy-governance",
+          "label": "Leaders request a performance conclusion before data quality is established",
+          "kind": "scenario-cue"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "existing-records",
+          "label": "A spreadsheet has already been compiled.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "planning-demand",
+          "label": "Decision-makers have expressed a need for evidence.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Document definitions, missingness, verification methods, and limitations before interpreting trends.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Agree on responsible reporting roles and a review process as a learning interpretation.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a measure aligned with the stated objective. Define the numerator and denominator if applicable, identify a feasible data source, and state one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "plan-progress",
+            "label": "Proportion of municipalities submitting a complete report using the agreed definition and reporting period.",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed for this fictional exercise; verify against local data systems and do not present as an official Plan indicator unless the source explicitly lists it."
+          },
+          {
+            "id": "documented-actions",
+            "label": "Proportion of planned actions with a documented status update",
+            "labelType": "proposed-learning-indicator",
+            "note": "Learning interpretation; not asserted to be a specific Plan indicator."
+          }
+        ],
+        "limitationsPrompt": "What might be missing, inconsistently recorded, or not comparable across locations or time?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "The Plan treats information systems, evidence, indicators, and verification as part of planning and monitoring.",
+          "Raw counts are not enough to establish comparable coverage or performance when definitions and denominators differ.",
+          "Data limitations should be stated alongside any conclusions."
+        ],
+        "commonPitfalls": [
+          "Ranking municipalities from incomplete, non-comparable counts.",
+          "Presenting a proposed data-quality measure as an official Plan indicator."
+        ],
+        "reflectionQuestion": "What minimum metadata and verification would make the next reporting cycle more interpretable?"
+      },
+      "reviewChecklist": [
+        "I separated available data from conclusions not supported by it.",
+        "I identified a data-quality limitation.",
+        "I proposed a feasible improvement and verification step."
+      ]
+    },
+    {
+      "id": "local-mental-health-action-plan",
+      "title": "The Local Mental Health Action Plan",
+      "level": "advanced",
+      "estimatedMinutes": 18,
+      "tags": [
+        "integrated-planning",
+        "four-pillars",
+        "budget",
+        "monitoring"
+      ],
+      "learningObjectives": [
+        "Integrate the four strategic pillars in a feasible local planning exercise.",
+        "Distinguish source-aligned priorities from locally proposed actions.",
+        "Connect actions, resources, and indicators without claiming unsupported impact."
+      ],
+      "disclaimer": "Fictional educational scenario. This exercise applies the Strategic Plan as a policy framework; it is not a clinical practice guideline, legal opinion, or description of current local service availability.",
+      "scenario": "A fictional local planning team has limited time to prepare a mental health action plan. Proposed activities include community information sessions, coordination meetings, service mapping, and improved reporting. The team has not agreed on priorities, owners, resources, or indicators.",
+      "contextNotes": "No local budget, approved plan, current outcome data, or mandatory allocation is specified. The scenario does not establish that any proposed activity is funded or that a particular budget percentage is required.",
+      "sourceAnchors": [
+        {
+          "claim": "The Plan is organized around four pillars: promotion and prevention, leadership and governance, service delivery, and information and research.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "26–27",
+            "pdfPages": "40–41",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan links outcomes, outputs, activities, indicators, and verification within its strategic and monitoring framework.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "27–38",
+            "pdfPages": "41–52",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        },
+        {
+          "claim": "The Plan includes a monitoring and evaluation plan in an annex.",
+          "label": "source-says",
+          "citation": {
+            "printedPages": "79–80",
+            "pdfPages": "93–94",
+            "verificationStatus": "verified against supplied PDF"
+          }
+        }
+      ],
+      "decisionPoints": [
+        {
+          "id": "lo-d1",
+          "prompt": "How should the team turn the activity list into a usable draft plan?",
+          "choices": [
+            {
+              "id": "a",
+              "text": "Keep the activity list as-is and judge success by how many events took place.",
+              "feedback": "Activity counts can be useful, but without objectives, owners, resources, and aligned measures the team cannot judge broader progress.",
+              "rating": "developing",
+              "nextStep": "lo-planner"
+            },
+            {
+              "id": "b",
+              "text": "Prioritize a small set of objectives, map each action to a pillar, assign locally confirmed leads/resources, and specify indicators and verification.",
+              "feedback": "Strong reasoning: it connects the Plan’s architecture to implementation and monitoring without assuming a budget or result.",
+              "rating": "strong",
+              "nextStep": "lo-planner"
+            },
+            {
+              "id": "c",
+              "text": "Allocate an invented fixed percentage of the local budget because the source plan requires it.",
+              "feedback": "The scenario and cited strategic framework do not establish such a mandatory local allocation; verify applicable requirements separately.",
+              "rating": "needs-reconsideration",
+              "nextStep": "lo-planner"
+            }
+          ]
+        }
+      ],
+      "determinantOptions": [
+        {
+          "id": "no-priorities",
+          "level": "policy-governance",
+          "label": "No agreed priorities, owners, or resource plan",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "activity-focus",
+          "level": "service-system",
+          "label": "Activities are listed without defined outcomes or dependencies",
+          "kind": "scenario-cue"
+        },
+        {
+          "id": "measurement-gap",
+          "level": "information",
+          "label": "Indicators and verification methods have not been agreed",
+          "kind": "scenario-cue"
+        }
+      ],
+      "protectiveFactorOptions": [
+        {
+          "id": "candidate-actions",
+          "label": "Several candidate activities have already been proposed.",
+          "labelType": "scenario-fact"
+        },
+        {
+          "id": "planning-team",
+          "label": "A cross-functional planning team is in place.",
+          "labelType": "scenario-fact"
+        }
+      ],
+      "pillarOptions": [
+        {
+          "id": "promotion",
+          "label": "Promotion and Prevention",
+          "exampleAction": "Consider community information activities aligned to a stated promotion objective.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "governance",
+          "label": "Leadership and Governance",
+          "exampleAction": "Prioritize and document responsibility, coordination, and resource assumptions.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "services",
+          "label": "Services",
+          "exampleAction": "Include service mapping or service improvements only where local needs and capacity support them.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            0,
+            1
+          ]
+        },
+        {
+          "id": "information",
+          "label": "Information and Research",
+          "exampleAction": "Link indicators to data sources and verification methods.",
+          "labelType": "learning-interpretation",
+          "sourceAnchorIds": [
+            1,
+            2
+          ]
+        }
+      ],
+      "monitoringTask": {
+        "prompt": "Choose a measure aligned with the stated objective. Define the numerator and denominator if applicable, identify a feasible data source, and state one limitation.",
+        "candidateIndicators": [
+          {
+            "id": "plan-progress",
+            "label": "Proportion of prioritized actions with a named responsible lead, resource assumption, indicator, and verification method.",
+            "labelType": "proposed-learning-indicator",
+            "note": "Proposed for this fictional exercise; verify against local data systems and do not present as an official Plan indicator unless the source explicitly lists it."
+          },
+          {
+            "id": "documented-actions",
+            "label": "Proportion of planned actions with a documented status update",
+            "labelType": "proposed-learning-indicator",
+            "note": "Learning interpretation; not asserted to be a specific Plan indicator."
+          }
+        ],
+        "limitationsPrompt": "What might be missing, inconsistently recorded, or not comparable across locations or time?"
+      },
+      "debrief": {
+        "keyTakeaways": [
+          "The Plan organizes strategic action around four pillars and connects outcomes with indicators and verification.",
+          "A local action plan should not assume a funding mandate or outcome not stated in the source.",
+          "The proposed completeness indicator is for this learning exercise."
+        ],
+        "commonPitfalls": [
+          "Treating activity completion as proof of population-level impact.",
+          "Inventing mandatory budget allocations.",
+          "Assigning roles without checking local mandates or resources."
+        ],
+        "reflectionQuestion": "Which action should be prioritized first, and what evidence would justify that choice?"
+      },
+      "reviewChecklist": [
+        "I used all relevant pillars without forcing every action into all four.",
+        "I stated resource and role assumptions.",
+        "I aligned an indicator with implementation and verification."
+      ]
+    }
+  ],
+  "citationVerification": {
+    "status": "verified",
+    "method": "Checked printed page numbers and corresponding PDF page numbers against extracted text from the supplied National Mental Health Strategic Plan 2019–2023 PDF on 4 October 2026.",
+    "note": "Verification confirms page mapping and that the cited section supports the summarized claim; it does not imply that historical 2019–2023 targets were achieved. Pass 5 added three fictional cases using already verified source anchors; scenario-level applications and proposed indicators are explicitly labeled as learning interpretations."
+  }
+}
