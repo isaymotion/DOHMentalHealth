@@ -32,15 +32,19 @@ for (const c of data.cases) {
   for (const p of c.pillarOptions) assert.ok(p.id && p.label && p.exampleAction, `${c.id}: incomplete pillar option`);
   assert.ok(c.monitoringTask.candidateIndicators.length, `${c.id}: no indicators`);
 }
-for (const asset of ['css/styles.css','js/app.js','data/release2/cases.js','data/assessment-data.js','assets/icon.svg','manifest.json']) assert.ok(fs.existsSync(path.join(root, asset)), `missing asset ${asset}`);
+for (const asset of ['css/styles.css','js/app.js','data/release2/cases.js','data/assessment-data.js','data/study-guide-data.js','assets/icon.svg','manifest.json']) assert.ok(fs.existsSync(path.join(root, asset)), `missing asset ${asset}`);
 for (const ref of ['data/release2/cases.js','js/app.js']) assert.ok(html.includes(ref), `index missing script ${ref}`);
 assert.ok(css.includes('@media(max-width:600px)'), 'mobile breakpoint missing');
 assert.ok(app.includes('localStorage') && app.includes('mindplan-release2-state-v1'), 'local progress storage not implemented');
 assert.ok(app.includes('Export local progress JSON'), 'progress export missing');
-assert.ok(sw.includes('mindplan-v2.6.1'), 'service worker cache version not bumped');
+assert.ok(sw.includes('mindplan-v2.10.0'), 'service worker cache version not bumped');
 assert.ok(app.indexOf('const FLASHCARDS=') < app.indexOf("document.getElementById('dueCount').textContent=flashcardsDueCount()"), 'flashcard count must initialize after FLASHCARDS to avoid startup ReferenceError');
 assert.ok(app.includes('MindPlan could not finish loading'), 'startup errors should show a recovery message instead of a permanent loading screen');
 assert.ok(sw.includes('./data/assessment-data.js'), 'assessment data missing from offline cache');
+assert.ok(sw.includes('./data/study-guide-data.js'), 'Study Guide data missing from offline cache');
+assert.ok(html.includes('data/study-guide-data.js'), 'Study Guide data script missing');
+assert.ok(html.includes('data-page="studyguide"'), 'Study Guide navigation missing');
+assert.ok(app.includes('function studyGuidePage'), 'Study Guide page missing');
 assert.ok(html.includes('id="backButton"'), 'visible global back button missing');
 assert.ok(html.includes('id="globalSearch"') && html.includes('id="searchResults"'), 'global search interface missing');
 assert.ok(app.includes('function buildSearchIndex') && app.includes('function runSearch'), 'whole-app search index and runner missing');
@@ -59,10 +63,31 @@ for (const q of assessment.questions) { assert.ok(q.id && q.topic && q.prompt &&
 assert.ok(app.includes('function startAssessment') && app.includes('function finishAssessment'), 'assessment runner or results missing');
 assert.ok(app.includes('mindplan-assessment-v1') && app.includes('function saveAssessSaved'), 'local assessment history missing');
 assert.ok(css.includes('.timer-chip') && css.includes('.assessment-question'), 'assessment styling missing');
+assert.ok(html.includes('data-page="oral"'), 'oral exam navigation missing');
+assert.ok(html.includes('data-page="quickref"'), 'quick reference navigation missing');
+assert.ok(app.includes('function quickReference') && app.includes('QUICKREF_ACRONYMS') && app.includes('QUICKREF_AGENCIES'), 'quick-reference glossary and agency directory missing');
+assert.ok(app.includes('QUICKREF_INDICATORS') && app.includes('QUICKREF_TARGETS') && app.includes('HISTORICAL PLAN TARGETS'), 'indicator index and historical targets missing');
+assert.ok(css.includes('.quickref-table') && css.includes('.quickref-tabs'), 'quick-reference table styling missing');
+assert.ok(app.includes('function oralPage') && app.includes('function startOral') && app.includes('function renderOralStation'), 'oral exam flow missing');
+assert.ok(app.includes('mindplan-oral-v1') && app.includes('localStorage.setItem(ORAL_KEY'), 'oral exam drafts and sessions must save locally');
+assert.ok(app.includes('examiner follow-up questions') || app.includes('Examiner follow-up questions'), 'oral follow-up prompts missing');
+assert.ok((app.match(/id:'oral-/g)||[]).length >= 6, 'six oral stations required');
+assert.ok(css.includes('.oral-station'), 'oral exam styling missing');
+
+assert.ok(css.includes(':focus-visible') && css.includes('prefers-reduced-motion') && css.includes('forced-colors'), 'accessibility focus/motion/contrast support missing');
+assert.ok(css.includes('.skip-link:focus') && css.includes('min-height:44px'), 'skip-link or touch target enhancements missing');
+assert.ok(html.includes('aria-label="MindPlan content"') && html.includes('aria-atomic="true"'), 'main landmark or status announcement accessibility missing');
+assert.ok(app.includes("sourceDialog.addEventListener('close'") && app.includes("document.getElementById('closeSourceDialog').focus()"), 'citation dialog focus handling missing');
+assert.ok(app.includes("searchResults.addEventListener('keydown'") && app.includes("items[i-1].focus()"), 'search keyboard arrow navigation missing');
+assert.ok(app.includes("setAttribute('aria-current','page')") && app.includes("setAttribute('aria-busy','false')"), 'navigation state announcements missing');
+
 console.log(`PASS: ${data.cases.length} unique cases validated`);
 console.log('PASS: decision options, feedback, source citations, pillars, indicators, and debrief data validated');
 console.log('PASS: app assets, mobile breakpoint, local progress/export, and service-worker version validated');
 console.log('PASS: source-linked citation dialog, framework visual, and local spaced-review flashcards validated');
 console.log(`PASS: ${assessment.questions.length} assessment questions, three question types, rationales, citations, and topic mastery metadata validated`);
 console.log('PASS: timed exam runner, local assessment history, export/reset, and offline asset registration validated');
+console.log('PASS: six oral exam stations, follow-ups, model outlines, self-review, and local draft/session storage validated');
+console.log('PASS: searchable quick-reference glossary, agency directory, indicator index, historical target table, and responsive styles validated');
+console.log('PASS: keyboard focus, reduced motion, forced-colors, dialog focus return, and search keyboard accessibility enhancements validated');
 console.log('NOTE: real-browser navigation is blocked in this execution environment; browser interaction/offline behavior remains a manual deployment check.');

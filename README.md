@@ -112,3 +112,56 @@ Run `node tests/validate.js` and `node --check js/app.js`. Real-browser testing 
 ### Pass 7 validation
 
 Run `node tests/validate.js` to validate the case library, assessment item structure, answer keys, source page metadata, and required app assets. Browser interaction, timer behavior, and persistence should also be manually tested on the deployed GitHub Pages site.
+
+
+## Pass 8 — Oral examination simulator (v2.8.0)
+
+- Added a dedicated oral examination area with six policy-focused fictional viva stations, examiner follow-up questions, model answer outlines, and transparent self-review checklists.
+- Includes quick-viva and three-station mock oral modes. Learners may speak answers aloud and optionally write notes; the app does not record audio or use speech recognition.
+- Draft notes, checklist self-ratings, and completed session summaries are saved in browser localStorage only. No server or learner account is required.
+- Model answers are labeled as learning interpretations where appropriate and include printed/PDF page anchors. Local responsibilities, current service arrangements, and financing procedures must be verified separately. Historical 2019–2023 targets are not evidence of achievement.
+- Self-ratings are formative reflection, not validated grading.
+
+### Pass 8 validation
+
+Run `node tests/validate.js` and `node --check js/app.js`. Real-browser testing remains recommended for station navigation, source dialogs, local draft persistence, and mobile layouts.
+
+
+## Pass 9 — Policy Quick-Reference Center (v2.8.0)
+
+- Added a searchable reference center with acronym glossary, selected agency responsibilities, indicator descriptions, and a compact table of selected historical 2020–2023 targets.
+- Search works within each reference tab and the global app search can route directly to glossary entries, agencies, indicators, and target rows.
+- The acronym glossary follows the Plan's acronym pages (printed pp. vii–viii; PDF pp. 7–8). The selected indicator/target rows cite printed pp. 24–26 / PDF pp. 38–40, based on the supplied PDF.
+- Targets are explicitly labeled historical; this table does not claim actual achievement or current performance. Agency associations are transcribed from the selected source table and are not a complete mandate directory.
+- Added a horizontally scrollable responsive table for narrow screens and bumped the service-worker cache to v2.8.0.
+
+
+## Pass 10 — Accessibility and responsive usability (v2.9.0)
+
+- Added clear keyboard focus indicators, a more discoverable skip link, larger minimum interactive targets, and reduced-motion / forced-colors support.
+- Improved global search result announcements and arrow-key navigation, including Arrow Up to return to the search field and Escape to close results.
+- Improved navigation focus behavior and returns focus to the citation trigger after the source dialog closes.
+- Added responsive overflow handling for narrow screens and improved dialog behavior.
+- Bumped the service-worker cache to v2.9.0.
+- This pass improves accessibility but is not a claim of WCAG conformance; screen-reader and real-device testing are still required.
+
+### Pass 10 validation
+
+Run `node tests/validate.js` and `node --check js/app.js`. Manually test keyboard-only navigation, focus visibility, screen-reader announcements, forced-colors/high-contrast settings, reduced-motion settings, and mobile layouts on the deployed site.
+
+## Study Guide — Release 12, Pass A
+
+The verified source outline and pagination audit is available at `docs/release12-pass-a-verified-outline.md`. It maps the source's table of contents to PDF pages, proposes a learner-oriented chapter order, and flags annex pagination differences that must be handled carefully. Pass A is an outline milestone only; the paraphrased Study Guide UI and first three topics belong to Pass B.
+
+
+## Study Guide — Release 12, Pass B (v2.10.0)
+
+- Added a Study Guide navigation area with three source-grounded starter topics: (1) what the Plan is and why it was developed, (2) vision, mission, and three goals, and (3) strategic framework and four pillars.
+- Each topic includes a concise summary, source-linked page references, an active-recall question, feedback, and locally stored review status. The third topic includes the five guiding models/approaches named in the Plan and clarifies the four-pillars/five-outcomes structure.
+- Topics are source-derived from the supplied *National Mental Health Strategic Plan 2019–2023*. Explanatory text is labeled as learning explanation; historical targets are not represented as current or achieved results.
+- Added Study Guide entries to global search and included its data file in the offline cache.
+- Pass B is a foundation and first-three-topic milestone, not the complete Study Guide. Releases 13–17 remain planned: complete chapter summaries, high-yield revision, interactive learning integration, personalized study plans, and source verification/quality assurance.
+
+### Pass B validation
+
+Run `node --check js/app.js` and `node tests/validate.js`. Manual browser testing is still recommended for topic navigation, quiz feedback, local persistence, source dialog links, mobile layouts, and offline caching.
