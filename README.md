@@ -1,167 +1,140 @@
-# MindPlan — Mental Health Strategic Plan Study Guide
+# MindPlan Interactive Learning
 
-A responsive, static web app for psychiatry residents studying the **Philippine Council for Mental Health, *National Mental Health Strategic Plan 2019–2023***. It is designed for GitHub Pages and runs without a backend, build step, analytics, external libraries, or AI service.
+MindPlan is a static, offline-first study app for psychiatry residents using the **Philippine National Mental Health Strategic Plan 2019–2023** as its curriculum source.
 
-## Features
-- Ten fictional interactive learning cases with branching decisions, SDoMH mapping, action planning, monitoring, and debriefs
-- Whole-app search with destination labels and keyboard support
-- Clickable source citations that open a reference dialog with claim/summary, printed page, PDF page, and a link to the DOH-hosted PDF at the relevant PDF page
-- Interactive strategic framework: vision → mission → goals → pillars → outcomes → outputs and activities
-- Sixteen source-linked flashcards with local Again / Difficult / Mastered review scheduling
-- Browser-local case completion and flashcard review state; no account, backend, analytics, or cloud learner tracking
-- Responsive dark theme with light-mode toggle
-- Service-worker caching for repeat visits/offline use after the first successful load
-- Clear distinction between source statements, learning interpretations, and proposed measures; 2019–2023 targets are historical
+## Current release
 
-## Deploy to GitHub Pages
-1. Create a GitHub repository and upload the contents of this folder to its root.
-2. Open **Settings → Pages**.
-3. Under **Build and deployment**, select **Deploy from a branch**, choose `main` and `/ (root)`, then save.
-4. Wait for GitHub Pages to publish the site. Open the provided Pages URL.
+**v2.37.0 · October 2026 · Release 18 Pass 4**
 
-No Node.js, package installation, or build command is required.
+Release 15 integrates device-local learning support without adding a backend, account, telemetry, or cloud learner tracking:
 
-## Content and citations
-This study guide summarizes only the source document listed below. Page references are given as **printed page · PDF page**. For the main body, PDF pages are generally 14 pages after the printed page (for example, printed p. 23 is PDF p. 37). Front matter uses Roman numerals and does not follow that offset. Annex page references use the printed pagination shown in the document's table of contents.
+- learning-data audit and explicit storage boundaries;
+- formative topic mastery from distinct objective assessment evidence;
+- transparent spaced-review scheduling for flashcards;
+- configurable personalized Study Plan;
+- compact learning dashboard on Overview;
+- validated JSON backup/import and scoped reset controls;
+- privacy and source-boundary disclosures;
+- integration, regression, and release QA;
+- expanded dashboard with topic evidence bands, targeted review, and recent objective assessment activity;
+- unified, prioritized review queue combining due cards, missed concepts, topic evidence, unfinished cases, and unreviewed topics.
 
-**Primary source:** Philippine Council for Mental Health. *National Mental Health Strategic Plan 2019–2023*. Department of Health / Philippine Council for Mental Health. Source PDF: `Mental-Health-Strategic-Plan.pdf` (provided separately; not redistributed in this repository).
+Release 14's 30-item revision bank and Release 13's Study Guide remain available.
 
-The plan describes intended activities and targets for 2019–2023. Those targets are historical planning targets, not evidence of present-day implementation or achievement. This app does not independently verify current status and should not replace the source document for formal citation or policy interpretation.
+## Run locally
 
-## Local data
-Study progress, quiz scores, theme choice, and bookmarks are stored in this browser's `localStorage`. They are not sent to a server. Clearing browser site data will remove local progress.
+This is a static site. Serve the project directory with any local HTTP server or deploy it to GitHub Pages. The service worker is registered when the site is served over HTTP(S).
 
-## Release 2 — Interactive Clinical Learning (Pass 3)
+For automated validation:
 
-The Pass 1 blueprint and the expanded eight-case fictional library are connected to a static, browser-based interactive case engine. Open `index.html` locally or deploy the folder to GitHub Pages; no build step or backend is required.
+```bash
+node tests/validate.js
+```
 
-### Interactive case flow
-- Eight cases spanning service access, school promotion, local governance, data quality, disaster-related psychosocial support, rights and participation, workforce capacity, and integrated local planning
-- Branching decision points with immediate authored feedback and a transparent rating
-- SDoMH mapper for scenario cues, protective factors, and information gaps
-- Four-pillar intervention planner with example actions explicitly labeled as learning interpretations
-- Monitoring and evaluation fields for indicator, numerator/denominator, data source, limitations, and rationale
-- Review checklist, formative completeness score, debrief, reflection prompt, and source anchors
-- Browser-local completion status, exportable progress JSON, dark/light theme, responsive layout, and optional offline caching
+The test suite validates curriculum structure, source metadata, Release 14 assessment distribution, accessibility markers, Release 15 modules, local-data contracts, syntax, and offline asset registration.
 
-### Pass 3 limitations
-- The eight-case library is an expanded learning draft; additional cases and user testing may still be useful.
-- Citation page mappings were checked against the supplied source PDF in Pass 4; this verifies page mapping and section support, not achievement of historical targets.
-- The formative score is an educational checklist, not a validated competency measure or pass mark. Free-text responses are not automatically graded.
-- The app is a learning companion, not a clinical practice guideline. Verify current local services and protocols separately.
-- The Plan's 2019–2023 targets are historical planning targets, not evidence of present-day implementation or achievement.
+## Privacy and storage
 
-The detailed architecture and content contract remain in `docs/release2-blueprint.md`, `data/release2/cases.json`, and `data/release2/case-schema.json`.
+Learning data is stored in the browser's localStorage. There is no learner account, backend database, cloud sync, or telemetry in this release.
+
+The full backup is a plain-text JSON file and is **not encrypted**. It may contain assessment responses, saved case notes, and oral-exam drafts. Export or share it only when appropriate.
+
+Clearing browser/site data can remove local progress. The app therefore provides an explicit full-data export and validated import flow. Theme preference is intentionally preserved outside the learning backup.
+
+## Interpretation boundaries
+
+Mastery labels and Study Plan priorities are transparent learning heuristics, not validated measures of clinical competence, retention, or board-examination performance. `Not assessed` is not treated as weakness, and short-answer self-checks do not determine objective mastery.
+
+The curriculum source is the **National Mental Health Strategic Plan 2019–2023**. Its historical targets are not presented as evidence of current achievement. Where source verification remains incomplete, MindPlan retains an explicit verification warning rather than silently filling the gap.
+
+## Release 15 QA
+
+See [`docs/release15-pass7-integration-and-release-qa.md`](docs/release15-pass7-integration-and-release-qa.md) for the integrated feature inventory, automated QA results, manual browser checks, known limitations, and deployment checklist.
 
 ## Attribution
+
 This app was created by Isabella Navarro, MD. Latest version October 2026. isaymotion@gmail.com
 
-## Versioning
-- **v2.3.0 — October 2026:** Pass 4 citation audit and QA updates for the eight-case interactive learning library.
-- **v1.0.0 — October 2026:** Initial study-guide design milestone.
+## Release 16 · Pass 1
 
-## License / source rights
-The app code is provided for reuse and adaptation. The source strategic plan remains the property of its respective rights holders; consult the original publication for its terms and acknowledgements. The source PDF is intentionally not bundled.
+See [`docs/release16-pass1-learning-dashboard.md`](docs/release16-pass1-learning-dashboard.md) for the dashboard changes and QA boundaries.
 
 
-## Pass 4 — Citation verification and QA
+## Release 16 · Pass 2
 
-- Checked the case-library printed-page/PDF-page mappings against the supplied *National Mental Health Strategic Plan 2019–2023* PDF.
-- Corrected the LGU service-coverage indicator citation to printed p. 34 / PDF p. 48.
-- Citation checks establish page mapping and section support only; 2019–2023 targets remain historical and are not claims of current achievement.
-- Added a repeatable static validation suite (`node tests/validate.js`) for case structure, choices, citations, assets, mobile breakpoints, local progress/export, and cache version. Browser-based navigation was attempted, but the execution environment blocked both local HTTP and file URLs; real-browser interaction and offline behavior still require manual deployment checks.
-- Updated the app and service-worker cache version to 2.2.0.
+See [`docs/release16-pass2-intelligent-review-queue.md`](docs/release16-pass2-intelligent-review-queue.md) for the queue priorities, evidence boundaries, integration, and QA notes.
 
+## Release 16 · Pass 3
 
-## Release 2 — Pass 5
-
-The interactive case library now follows the requested ten-case curriculum. Three distinct cases were added: The Barangay Referral Gap, The Person Behind the Policy, and The Funding Proposal. Four existing cases were retitled to match the proposed curriculum, and the unrelated Workforce Capacity Gap bonus case was removed to keep the library at ten. See `docs/pass5-case-coverage.md`.
+**v2.21.0 · Adaptive Assessment** adds an objective-question practice set selected from recent saved performance. Recently missed items and topics with repeated errors are prioritized, followed by unseen items and reinforcement. The selection reasons are shown to learners. Short-answer self-checks are excluded from adaptive objective scoring. This is a transparent practice heuristic, not a validated adaptive test or measure of clinical competence. See [`docs/release16-pass3-adaptive-assessment.md`](docs/release16-pass3-adaptive-assessment.md).
 
 
-## Global navigation update (v2.4.0)
-- Added a prominent, always-visible **Back** button. Inside a case it returns to the previous learning step; from a case introduction it returns to the case library; elsewhere it returns to the previous app section or Overview.
-- Added a whole-app search field in the header. It searches case titles, scenarios, learning objectives, decisions and choice feedback, determinant/protective-factor options, pillars, monitoring tasks, debriefs, source anchors, and the main app sections.
-- Search results label the destination (for example, **Case: The School Campaign → Decision** or **Four pillars**) and open the relevant case step or section.
-- Keyboard support: **Ctrl/⌘ + K** focuses search, **Enter** opens the first result, **Arrow Down** focuses the first result, and **Escape** closes results.
-- Updated the service-worker cache version so deployed clients fetch the new navigation assets.
+## Release 16 · Pass 4
+
+**v2.22.0 · Clinical Case Progression** adds a guided pathway through the existing fictional case library. Cases are grouped from foundation to integration to systems application using their existing curriculum levels and objectives. Each case is approached through a four-step scaffold: notice context and determinants, formulate the system/service problem, choose coordinated actions, and select indicators/reflect on limits. Progress is derived from existing local case-completion records; no additional learner tracking is introduced. The sequence is an educational interpretation, not a sequence specified by the source Plan, and completion is not a validated competency score. See [`docs/release16-pass4-clinical-case-progression.md`](docs/release16-pass4-clinical-case-progression.md).
 
 
-## Pass 6 — Evidence-linked learning (v2.5.0)
+## Release 16 · Pass 5
 
-- Added clickable source citation buttons. Selecting one opens an accessible reference dialog with the claim/summary, printed and PDF page references, a source-linked excerpt/note, and a link to the DOH-hosted source PDF.
-- Added an interactive strategic framework visual for vision → mission → goals → pillars → outcomes → outputs and activities. Each node has a source-linked explanation. The diagram communicates the Plan's stated structure, not a guarantee of causal impact.
-- Added 16 source-linked flashcards for vision, mission, goals, pillars, outcome areas, framework relationships, agency responsibility tables, indicators, and interpretation of historical targets.
-- Added local flashcard review states: Again (due now), Difficult (due in one day), and Mastered (due in seven days). These are deliberately simple review intervals, not a validated spaced-repetition algorithm.
-- Flashcard progress is stored in browser localStorage and is not uploaded. Case completion data remains in its existing local storage key.
-- The source is the National Mental Health Strategic Plan 2019–2023. Historical targets are not presented as current performance or evidence of achievement.
-
-### Pass 6 validation
-
-Run `node tests/validate.js` and `node --check js/app.js`. Real-browser testing is still recommended for modal behavior, mobile layout, offline caching, and localStorage persistence.
+**v2.23.0 · OSCE and Oral Examination Integration** adds a three-station OSCE circuit with a five-minute timer per station, examiner follow-up questions, model answer outlines, source-linked learning notes, and a four-domain self-review rubric (structured reasoning, source fidelity, feasibility/coordination, and monitoring/limitations). Ratings are descriptive self-reflection only; there is no automatic pass/fail threshold or validated competency score. Drafts, rubric ratings, and session summaries stay in localStorage. See [`docs/release16-pass5-osce-integration.md`](docs/release16-pass5-osce-integration.md).
 
 
-## Pass 7 — Assessment and mastery (v2.6.1)
+## Release 16 Pass 6 — Educator Mode
 
-- Added an examination-mode area with source-linked single-best-answer and true/false questions, immediate-feedback practice, and a 10-question/10-minute timed exam.
-- Added short-answer rehearsal with model answer outlines and checklist-based learner self-review. Checklist scores are formative and are not validated grading.
-- Added topic-level performance summaries, missed-question review, retry-by-topic, and local JSON export/reset of assessment history.
-- Assessment history is stored in browser localStorage; no account, server, or cloud learner tracking is used.
-- Questions and explanations are grounded in the National Mental Health Strategic Plan 2019–2023, with printed and PDF page anchors. Some prompts explicitly labeled as learning interpretation rather than direct source claims.
-- Historical targets remain historical; the Plan itself is not presented as a clinical practice guideline.
-
-### Pass 7 validation
-
-Run `node tests/validate.js` to validate the case library, assessment item structure, answer keys, source page metadata, and required app assets. Browser interaction, timer behavior, and persistence should also be manually tested on the deployed GitHub Pages site.
+Adds a facilitator workspace to assemble printable session packs from the existing fictional case library and OSCE/viva prompts. Facilitators can select a case and/or station, set session duration and group type, add optional local notes, preview the outline, and print or save the pack as PDF. The output includes source-boundary prompts and formative feedback guidance. Generation happens in the browser; no learner records are uploaded. Materials are not validated assessment instruments, and the historical 2019–2023 Plan does not establish current local requirements or outcomes.
 
 
-## Pass 8 — Oral examination simulator (v2.8.0)
+## Release 16 · Pass 7 — Integration and Deployment QA
 
-- Added a dedicated oral examination area with six policy-focused fictional viva stations, examiner follow-up questions, model answer outlines, and transparent self-review checklists.
-- Includes quick-viva and three-station mock oral modes. Learners may speak answers aloud and optionally write notes; the app does not record audio or use speech recognition.
-- Draft notes, checklist self-ratings, and completed session summaries are saved in browser localStorage only. No server or learner account is required.
-- Model answers are labeled as learning interpretations where appropriate and include printed/PDF page anchors. Local responsibilities, current service arrangements, and financing procedures must be verified separately. Historical 2019–2023 targets are not evidence of achievement.
-- Self-ratings are formative reflection, not validated grading.
-
-### Pass 8 validation
-
-Run `node tests/validate.js` and `node --check js/app.js`. Real-browser testing remains recommended for station navigation, source dialogs, local draft persistence, and mobile layouts.
+**v2.25.0** completes a final static integration audit across navigation destinations, referenced runtime assets, service-worker precache entries, release metadata, and privacy/source-boundary disclosures. It adds a deployment checklist for HTTPS, service-worker installation, offline reload, mobile navigation, local-data export/import, OSCE timing, educator print output, and recovery from stale caches. Automated checks cannot replace real browser testing; the checklist records those steps as manual until actually performed. See [`docs/release16-pass7-integration-and-deployment-qa.md`](docs/release16-pass7-integration-and-deployment-qa.md).
 
 
-## Pass 9 — Policy Quick-Reference Center (v2.8.0)
+## Release 17 · Pass 1 — Curriculum Mapping
 
-- Added a searchable reference center with acronym glossary, selected agency responsibilities, indicator descriptions, and a compact table of selected historical 2020–2023 targets.
-- Search works within each reference tab and the global app search can route directly to glossary entries, agencies, indicators, and target rows.
-- The acronym glossary follows the Plan's acronym pages (printed pp. vii–viii; PDF pp. 7–8). The selected indicator/target rows cite printed pp. 24–26 / PDF pp. 38–40, based on the supplied PDF.
-- Targets are explicitly labeled historical; this table does not claim actual achievement or current performance. Agency associations are transcribed from the selected source table and are not a complete mandate directory.
-- Added a horizontally scrollable responsive table for narrow screens and bumped the service-worker cache to v2.8.0.
+**v2.27.0** adds a curriculum crosswalk linking existing Study Guide topics, fictional cases, objective/question-bank items, and oral-exam stations under seven learning themes: Plan mandate/context/goals; promotion and prevention; leadership/governance/coordination; services/access/integration; rights/participation; information/indicators/evaluation; and source fidelity/responsible interpretation. The crosswalk uses transparent keyword matching and may list a resource under multiple themes. It is an educational navigation aid, not an official curriculum, validated competency framework, or evidence of learner mastery. The source Plan covers 2019–2023; its historical targets are not evidence of current achievement. See [`docs/release17-pass1-curriculum-mapping.md`](docs/release17-pass1-curriculum-mapping.md).
 
+## Release 17 · Pass 4 — Educator Portfolio Review
 
-## Pass 10 — Accessibility and responsive usability (v2.9.0)
-
-- Added clear keyboard focus indicators, a more discoverable skip link, larger minimum interactive targets, and reduced-motion / forced-colors support.
-- Improved global search result announcements and arrow-key navigation, including Arrow Up to return to the search field and Escape to close results.
-- Improved navigation focus behavior and returns focus to the citation trigger after the source dialog closes.
-- Added responsive overflow handling for narrow screens and improved dialog behavior.
-- Bumped the service-worker cache to v2.9.0.
-- This pass improves accessibility but is not a claim of WCAG conformance; screen-reader and real-device testing are still required.
-
-### Pass 10 validation
-
-Run `node tests/validate.js` and `node --check js/app.js`. Manually test keyboard-only navigation, focus visibility, screen-reader announcements, forced-colors/high-contrast settings, reduced-motion settings, and mobile layouts on the deployed site.
-
-## Study Guide — Release 12, Pass A
-
-The verified source outline and pagination audit is available at `docs/release12-pass-a-verified-outline.md`. It maps the source's table of contents to PDF pages, proposes a learner-oriented chapter order, and flags annex pagination differences that must be handled carefully. Pass A is an outline milestone only; the paraphrased Study Guide UI and first three topics belong to Pass B.
+**v2.31.0** adds a voluntary portfolio review workflow to Educator Mode. Learners may choose to provide a MindPlan portfolio-summary JSON export; the app validates the format, reads it locally in memory, and displays activity counts and learner reflections separately. Educators can use a four-domain formative discussion rubric and print/save a review sheet with feedback and next steps. The imported file is not persisted or transmitted by MindPlan. Use only with informed learner permission and avoid identifiable patient/colleague information. This is not a validated competency assessment. See [`docs/release17-pass4-educator-portfolio-review.md`](docs/release17-pass4-educator-portfolio-review.md).
 
 
-## Study Guide — Release 12, Pass B (v2.10.0)
+## Release 17 · Pass 5 — Longitudinal educator review cycle
 
-- Added a Study Guide navigation area with three source-grounded starter topics: (1) what the Plan is and why it was developed, (2) vision, mission, and three goals, and (3) strategic framework and four pillars.
-- Each topic includes a concise summary, source-linked page references, an active-recall question, feedback, and locally stored review status. The third topic includes the five guiding models/approaches named in the Plan and clarifies the four-pillars/five-outcomes structure.
-- Topics are source-derived from the supplied *National Mental Health Strategic Plan 2019–2023*. Explanatory text is labeled as learning explanation; historical targets are not represented as current or achieved results.
-- Added Study Guide entries to global search and included its data file in the offline cache.
-- Pass B is a foundation and first-three-topic milestone, not the complete Study Guide. Releases 13–17 remain planned: complete chapter summaries, high-yield revision, interactive learning integration, personalized study plans, and source verification/quality assurance.
+**v2.31.0** adds a device-local workflow for voluntary review agreements, non-identifying learner codes, initial and follow-up dates, agreed learning goals, planned practice/support, and dated follow-up reflections. Educators can export the review cycle as JSON or print/save a progress summary. Records remain in the current browser unless the educator explicitly exports them; a delete action removes the local review-cycle records. Avoid sensitive or identifiable information. This supports continuity of formative feedback and does not rate, certify, or validate clinical competence. See [`docs/release17-pass5-longitudinal-educator-review-cycle.md`](docs/release17-pass5-longitudinal-educator-review-cycle.md).
 
-### Pass B validation
 
-Run `node --check js/app.js` and `node tests/validate.js`. Manual browser testing is still recommended for topic navigation, quiz feedback, local persistence, source dialog links, mobile layouts, and offline caching.
+## Release 17 · Pass 6 — Educator follow-up dashboard
+
+**v2.31.0** adds a dashboard over the existing local educator review cycles: total cycles, upcoming/due/overdue follow-ups, cycles with reflections, and recorded goals. Educators can filter the timeline to all cycles, due/overdue cycles, or cycles with reflections. Status is a workflow reminder only: a reflection does not prove a goal was achieved, and an overdue item is not a negative competency judgment. The dashboard reads only records in the current browser and introduces no cloud tracking or notifications. See [`docs/release17-pass6-educator-follow-up-dashboard.md`](docs/release17-pass6-educator-follow-up-dashboard.md).
+
+
+## Release 17 · Pass 7 — Final integration and deployment QA
+
+**v2.32.0** performs a final static integration audit across navigation routes, script and stylesheet references, service-worker precache entries, cache/version metadata, offline-first data assets, local-data privacy boundaries, and documented manual browser checks. The automated validator checks that local HTML script references and service-worker precache assets exist, that release metadata is consistent, and that expected routes and privacy safeguards remain present. Static checks cannot prove successful real-device navigation, printing, or offline reload; these remain explicit manual deployment checks. MindPlan is a static client-side learning aid, not a validated competency assessment or a source of current performance data for the historical 2019–2023 Plan. See [`docs/release17-pass7-integration-and-deployment-qa.md`](docs/release17-pass7-integration-and-deployment-qa.md).
+
+
+## Release 17 · Pass 8 — HTTP deployment smoke test
+
+**v2.33.0** adds a reproducible local HTTP smoke test that serves the static project over HTTP and requests the app entry point, every local script and stylesheet referenced by `index.html`, and every service-worker precache entry. It checks HTTP success, expected content availability, and release/cache metadata. Run `node tests/deployment-smoke.js` after `node tests/validate.js`. This verifies that the project can be served and its declared assets are reachable in a local HTTP environment; it does **not** establish successful live GitHub Pages deployment, iOS Safari behavior, browser interaction, printing, or offline reload. Those require the manual checklist in [`docs/release17-pass8-http-smoke-and-acceptance.md`](docs/release17-pass8-http-smoke-and-acceptance.md). The Plan remains a 2019–2023 historical source, and learning/educator records remain browser-local unless a user exports them.
+
+
+## Release 18 · Pass 1 — Integration audit and local-data workflow
+
+**v2.35.0** begins Release 18 with an integration audit of navigation, local assets, service-worker cache coverage, release metadata, and learning-data portability. The audit identified that the longitudinal educator review-cycle store was locally saved and separately exportable, but was missing from the unified learning-backup and reset inventory. Pass 1 adds that store to the recognized backup/import/reset categories and adds regression checks. Import/export remains user-controlled and browser-local until a file is deliberately shared. The review-cycle data is a formative workflow record, not evidence of competency.
+
+Automated checks cover static integration contracts and a local HTTP smoke test. Live GitHub Pages, interactive browser, print, and offline reload behavior still require manual acceptance testing; this release does not claim those browser checks have passed.
+
+
+## Release 18 · Pass 2 — Learning-data integrity and recovery
+
+Version v2.35.0 adds stricter backup validation, payload-size limits, validation of the educator review-cycle array format, and transaction-like rollback if an import write fails. See `docs/release18-pass2-data-integrity-and-recovery.md`. Rollback is best-effort because browser storage may continue failing; keep a separate backup before importing important records. Automated checks do not replace live-browser acceptance testing.
+
+
+## Release 18 · Pass 4 — Browser acceptance and deployment readiness
+
+**v2.37.0** consolidates the release acceptance checklist and re-runs the automated integration and local HTTP deployment checks. The local HTTP smoke test verifies that every declared local route/asset returns a non-empty HTTP 200 response and that the service-worker cache version matches the visible app version. An attempted Chromium acceptance run was blocked by this execution environment's browser policy, which prevents opening both localhost and `file://` pages. Therefore no successful real-browser interaction, service-worker installation, offline reload, live GitHub Pages, or iOS Safari result is claimed. Complete the manual checklist in `docs/release18-pass4-browser-acceptance.md` after deployment.
+
+
+## Release 18 · Pass 3 — Full learning-data workflow tests
+
+**v2.36.0** adds regression coverage for the lifecycle of every recognized browser-local learning-data category: representative records are serialized as a backup, validated, restored into isolated storage, and compared after round-trip. Tests also cover partial restore boundaries, preservation of theme and unrelated application data, alignment between the centralized store inventory and full-reset behavior, guarded export errors, cancelled file selection, and confirmation before restore. The fixtures verify data-portability contracts; they do not run a real browser or prove that every interactive screen saves correctly on iOS. Live HTTPS, mobile Safari, service-worker installation, offline reload, and hands-on create/save/reload testing remain manual acceptance checks.
