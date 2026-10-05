@@ -4,7 +4,7 @@ MindPlan is a static, offline-first study app for psychiatry residents using the
 
 ## Current release
 
-**v2.37.0 · October 2026 · Release 18 Pass 4**
+**v2.39.0 · October 2026 · Release 19 Pass 2**
 
 Release 15 integrates device-local learning support without adding a backend, account, telemetry, or cloud learner tracking:
 
@@ -20,6 +20,10 @@ Release 15 integrates device-local learning support without adding a backend, ac
 - unified, prioritized review queue combining due cards, missed concepts, topic evidence, unfinished cases, and unreviewed topics.
 
 Release 14's 30-item revision bank and Release 13's Study Guide remain available.
+
+## Release 19 · Pass 2 — Deep Study Guide layer
+
+**v2.39.0** adds a second learner-facing depth layer to all 10 Study Guide topics. Each topic now includes source-derived facts to master and multiple self-test prompts, in addition to the detailed notes, distinctions, exam focus, and source locators from Pass 1. The material is restricted to the supplied DOH/PCMH *National Mental Health Strategic Plan 2019–2023* PDF. No outside reference was used to author this pass.
 
 ## Run locally
 
@@ -129,6 +133,13 @@ Automated checks cover static integration contracts and a local HTTP smoke test.
 
 Version v2.35.0 adds stricter backup validation, payload-size limits, validation of the educator review-cycle array format, and transaction-like rollback if an import write fails. See `docs/release18-pass2-data-integrity-and-recovery.md`. Rollback is best-effort because browser storage may continue failing; keep a separate backup before importing important records. Automated checks do not replace live-browser acceptance testing.
 
+
+
+## Release 19 · Pass 1 — Comprehensive Study Guide
+
+**v2.38.0** expands the Study Guide from a concise overview into a structured learning resource across all 10 existing topics. Each topic now includes learning objectives, deeper source-grounded study notes, key distinctions, high-yield exam focus points, and primary source locators. The expansion preserves the supplied Plan’s historical scope and explicitly flags source inconsistencies or unresolved extraction issues rather than filling gaps by inference.
+
+The Study Guide remains based on the supplied *National Mental Health Strategic Plan 2019–2023*. Historical statistics, targets and proposed budgets are not presented as current achievements. Legal provisions remain subject to exact Act/IRR verification when used for legal or clinical decision-making.
 
 ## Release 18 · Pass 4 — Browser acceptance and deployment readiness
 
