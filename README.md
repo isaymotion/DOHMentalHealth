@@ -4,7 +4,7 @@ MindPlan is a static, offline-first study app for psychiatry residents using the
 
 ## Current release
 
-**v2.39.0 · October 2026 · Release 19 Pass 2**
+**v2.39.1 · October 2026 · Release 19 Pass 3**
 
 Release 15 integrates device-local learning support without adding a backend, account, telemetry, or cloud learner tracking:
 
@@ -23,7 +23,7 @@ Release 14's 30-item revision bank and Release 13's Study Guide remain available
 
 ## Release 19 · Pass 2 — Deep Study Guide layer
 
-**v2.39.0** adds a second learner-facing depth layer to all 10 Study Guide topics. Each topic now includes source-derived facts to master and multiple self-test prompts, in addition to the detailed notes, distinctions, exam focus, and source locators from Pass 1. The material is restricted to the supplied DOH/PCMH *National Mental Health Strategic Plan 2019–2023* PDF. No outside reference was used to author this pass.
+**v2.39.1** adds a second learner-facing depth layer to all 10 Study Guide topics. Each topic now includes source-derived facts to master and multiple self-test prompts, in addition to the detailed notes, distinctions, exam focus, and source locators from Pass 1. The material is restricted to the supplied DOH/PCMH *National Mental Health Strategic Plan 2019–2023* PDF. No outside reference was used to author this pass.
 
 ## Run locally
 
