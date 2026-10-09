@@ -1,7 +1,7 @@
 # MindPlan Release 20 — Pass 1
 ## Mental Health Act IRR study section
 
-**Version:** v2.40.0 · October 2026
+**Version:** v2.40.1 · October 2026
 
 ### Why this was added
 The supplied National Mental Health Strategic Plan identifies Annex 2 as the Implementing Rules and Regulations (IRR) of RA 11036 and places it at PDF pp. 74–92. Those pages are scanned legal text, so the existing Study Guide could identify the annex but could not safely provide a rule-by-rule transcription.

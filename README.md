@@ -1,10 +1,11 @@
 # MindPlan Interactive Learning
+**v2.40.1 · October 2026 · Release 20 Pass 2** updates the browser favicon, installable app icons, iOS home-screen icon, and in-app header brand mark to use the supplied MindPlan pixel-art brain emblem. The icon is included in the offline cache.
 
 MindPlan is a static, offline-first study app for psychiatry residents using the **Philippine National Mental Health Strategic Plan 2019–2023** as its curriculum source.
 
 ## Current release
 
-**v2.40.0 · October 2026 · Release 20 Pass 1**
+**v2.40.1 · October 2026 · Release 20 Pass 2**
 
 Release 15 integrates device-local learning support without adding a backend, account, telemetry, or cloud learner tracking:
 
@@ -23,7 +24,7 @@ Release 14's 30-item revision bank and Release 13's Study Guide remain available
 
 ## Release 19 · Pass 2 — Deep Study Guide layer
 
-**v2.40.0** adds a dedicated Mental Health Act IRR study section. The Study Guide now has 11 topics, including a chapter-by-chapter map of IRR Sections 1–49, high-yield consent/capacity, safeguards, internal review board, community services, agency responsibilities, PCMH, penalties and effectivity material. Because Annex 2 of the supplied Strategic Plan is scanned, this new section explicitly discloses its external rule-level source trail and does not present a third-party copy as the official legal publication.
+**v2.40.1** adds a dedicated Mental Health Act IRR study section. The Study Guide now has 11 topics, including a chapter-by-chapter map of IRR Sections 1–49, high-yield consent/capacity, safeguards, internal review board, community services, agency responsibilities, PCMH, penalties and effectivity material. Because Annex 2 of the supplied Strategic Plan is scanned, this new section explicitly discloses its external rule-level source trail and does not present a third-party copy as the official legal publication.
 
 ## Run locally
 

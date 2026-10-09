@@ -39,7 +39,7 @@ for (const ref of ['data/release2/cases.js','js/app.js']) assert.ok(html.include
 assert.ok(css.includes('@media(max-width:600px)'), 'mobile breakpoint missing');
 assert.ok(app.includes('localStorage') && app.includes('mindplan-release2-state-v1'), 'local progress storage not implemented');
 assert.ok(app.includes('Export case progress only'), 'progress export missing');
-assert.ok(sw.includes('mindplan-v2.40.0'), 'service worker cache version not bumped');
+assert.ok(sw.includes('mindplan-v2.40.1'), 'service worker cache version not bumped');
 assert.ok(app.indexOf('const FLASHCARDS=') < app.indexOf("document.getElementById('dueCount').textContent=flashcardsDueCount()"), 'flashcard count must initialize after FLASHCARDS to avoid startup ReferenceError');
 assert.ok(app.includes('MindPlan could not finish loading'), 'startup errors should show a recovery message instead of a permanent loading screen');
 assert.ok(sw.includes('./data/assessment-data.js'), 'assessment data missing from offline cache');
@@ -60,11 +60,11 @@ assert.ok(app.includes('data-multi-choice') && app.includes('correctIndices'), '
 assert.ok(html.includes('data-page="revision"') && app.includes('function highYieldRevisionPage'), 'High-Yield Revision page missing');
 assert.ok(app.includes('mindplan-high-yield-revision-v1') && app.includes('data-revision-mark'), 'local revision tracking missing');
 assert.ok(app.includes("'framework-pillars':'Four pillars'") && app.includes("'annex-act':'Rights and participation'"), 'revision topic links must match real assessment topics');
-assert.ok(app.includes('Release 14 · Pass 7') && html.includes('v2.40.0'), 'Release 14 bank integration/version label missing');
+assert.ok(app.includes('Release 14 · Pass 7') && html.includes('v2.40.1'), 'Release 14 bank integration/version label missing');
 assert.ok(html.includes('data-page="studyguide"'), 'Study Guide navigation missing');
 assert.ok(html.includes('data-page="whatsnew"'), 'What’s New navigation missing');
 assert.ok(app.includes('function whatsNewPage') && app.includes("page==='whatsnew'"), 'What’s New page/render route missing');
-assert.ok(sw.includes('mindplan-v2.40.0'), 'service worker cache version not bumped for What’s New page');
+assert.ok(sw.includes('mindplan-v2.40.1'), 'service worker cache version not bumped for What’s New page');
 assert.ok(app.includes('function studyGuidePage'), 'Study Guide page missing');
 const studyScript = read('data/study-guide-data.js');
 assert.ok((studyScript.match(/id:'(?:policy-context|situation-gaps|plan-development|outcomes-indicators|annex-act|annex-irr-me|annex-budget-scorecards)'/g)||[]).length === 7, 'Pass 6 should integrate seven additional Study Guide topics');
@@ -171,7 +171,7 @@ assert.strictEqual(historyState['card-1'].history.length,1,'review history shoul
 let capped={}; for(let i=0;i<25;i++) capped=spaced.reviewEvent(capped,'card-1','difficult',fixedNow);
 assert.strictEqual(capped['card-1'].history.length,spaced.MAX_HISTORY,'history must be capped');
 assert.ok(html.includes('js/spaced-review.js'),'scheduler script must be loaded');
-assert.ok(sw.includes('mindplan-v2.40.0') && sw.includes('./js/spaced-review.js'),'new scheduler must be cached offline');
+assert.ok(sw.includes('mindplan-v2.40.1') && sw.includes('./js/spaced-review.js'),'new scheduler must be cached offline');
 console.log('PASS: Release 15 spaced-review intervals, due logic, capped local history, and offline registration validated');
 
 // Release 15 Pass 4: personalized plan prioritization tests.
@@ -194,7 +194,7 @@ console.log('PASS: Release 15 personalized study-plan priorities, time budget, u
 assert.ok(app.includes('function home(){') && app.includes('Learning dashboard'), 'integrated learning dashboard missing');
 for (const marker of ['Flashcards due','Topics with evidence','Study Guide topics','Revision topics','data-dashboard-plan','data-dashboard-open']) assert.ok(app.includes(marker), `dashboard signal/action missing: ${marker}`);
 assert.ok(app.includes('latest answered response per distinct objective item') || app.includes('latest answered response per distinct'), 'dashboard should explain mastery evidence basis');
-assert.ok(html.includes('v2.40.0') && sw.includes('mindplan-v2.40.0'), 'Pass 5 version/cache bump missing');
+assert.ok(html.includes('v2.40.1') && sw.includes('mindplan-v2.40.1'), 'Pass 5 version/cache bump missing');
 assert.ok(fs.existsSync(path.join(root,'docs/release15-pass5-dashboard-integration.md')), 'Pass 5 integration documentation missing');
 console.log('PASS: Release 15 dashboard integration, local progress signals, navigation actions, and version/cache registration validated');
 
@@ -211,7 +211,7 @@ assert.throws(()=>portability.validateBackup({format:'mindplan-learning-backup',
 assert.ok(app.includes('Export all learning data') && app.includes('Import backup') && app.includes('Reset all learning data'),'backup/import/full reset controls missing');
 assert.ok(app.includes('Theme preference will be preserved') && app.includes('Matching MindPlan records will be replaced'),'import/reset scope warnings missing');
 assert.ok(html.includes('js/data-portability.js') && sw.includes('./js/data-portability.js'),'data portability module must be loaded and cached');
-assert.ok(html.includes('v2.40.0') && sw.includes('mindplan-v2.40.0'),'Pass 6 version/cache bump missing');
+assert.ok(html.includes('v2.40.1') && sw.includes('mindplan-v2.40.1'),'Pass 6 version/cache bump missing');
 assert.ok(fs.existsSync(path.join(root,'docs/release15-pass6-data-portability-privacy.md')),'Pass 6 documentation missing');
 console.log('PASS: Release 15 versioned backup schema, validation/rejection cases, privacy warnings, import/export controls, reset scope, and offline registration validated');
 
@@ -245,8 +245,8 @@ for (const f of ['js/mastery-model.js','js/spaced-review.js','js/study-plan.js',
 
 // Version/cache consistency for the distributed app. Historical release notes may mention
 // older versions, but the live HTML/service worker must agree on the current release.
-assert.ok(html.includes('v2.40.0'), 'live HTML must identify v2.40.0');
-assert.ok(sw.includes("const CACHE='mindplan-v2.40.0'"), 'live service worker must use v2.40.0 cache');
+assert.ok(html.includes('v2.40.1'), 'live HTML must identify v2.40.1');
+assert.ok(sw.includes("const CACHE='mindplan-v2.40.1'"), 'live service worker must use v2.40.1 cache');
 assert.ok(!/CACHE='mindplan-v2\.17\.0'/.test(sw), 'stale v2.17.0 service-worker cache must not remain');
 
 // Core cross-module contracts.
@@ -275,7 +275,7 @@ assert.ok(app.includes('const attentionTopics=masteryTopics.filter'), 'targeted 
 assert.ok(app.includes('const recentObjective=(assessSaved.attempts||[]).filter'), 'recent objective assessment panel missing');
 assert.ok(app.includes('data-dashboard-topic'), 'topic-specific practice action missing');
 assert.ok(app.includes("a.mode!=='short'"), 'short-answer self-checks must be excluded from objective activity');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Release 16 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Release 16 version/cache mismatch');
 assert.ok(fs.existsSync(path.join(root,'docs/release16-pass1-learning-dashboard.md')), 'Release 16 Pass 1 documentation missing');
 console.log('PASS: Release 16 Pass 1 dashboard evidence bands, targeted review, recent objective results, privacy boundaries, and version/cache registration validated');
 
@@ -293,7 +293,7 @@ assert.ok(sampleQueue.items.some(x=>x.title==='Revisit missed concept: Promotion
 assert.ok(!sampleQueue.items.some(x=>x.title.includes('Not assessed')),'unassessed topics must not be treated as weak');
 assert.ok(sampleQueue.items.some(x=>x.kind==='case') && sampleQueue.items.some(x=>x.kind==='studyguide'),'unfinished learning should enter queue');
 assert.ok(fs.readFileSync(path.join(root,'service-worker.js'),'utf8').includes('./js/review-queue.js'),'review queue module must be cached offline');
-assert.ok(html.includes('data-page="reviewqueue"') && html.includes('v2.40.0'),'review queue navigation/version missing');
+assert.ok(html.includes('data-page="reviewqueue"') && html.includes('v2.40.1'),'review queue navigation/version missing');
 assert.ok(app.includes('function reviewQueuePage()') && app.includes('MINDPLAN_REVIEW_QUEUE.buildReviewQueue'),'review queue UI not integrated');
 console.log('PASS: Release 16 Pass 2 review queue priority, missed-topic signals, unassessed-topic safeguard, navigation, and offline registration validated');
 
@@ -310,7 +310,7 @@ assert.ok(adaptiveSet.reasons.length===adaptiveSet.items.length, 'every selected
 assert.ok(adaptiveSet.note.includes('not a validated adaptive test'), 'adaptive limits must be disclosed');
 assert.ok(html.includes('js/adaptive-assessment.js') && sw.includes('./js/adaptive-assessment.js'), 'adaptive module must load and cache offline');
 assert.ok(app.includes('data-assess-start="adaptive"') && app.includes('MINDPLAN_ADAPTIVE.selectAdaptiveQuestions'), 'adaptive assessment UI integration missing');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Release 16 Pass 3 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Release 16 Pass 3 version/cache mismatch');
 assert.ok(fs.existsSync(path.join(root,'docs/release16-pass3-adaptive-assessment.md')), 'Pass 3 documentation missing');
 console.log('PASS: Release 16 Pass 3 adaptive objective selection, missed-item prioritization, transparent reasons, short-answer separation, and offline version/cache registration validated');
 
@@ -325,7 +325,7 @@ assert.strictEqual(pathway.next.id,'c','next incomplete case should respect leve
 assert.strictEqual(pathway.stages.length,4,'case progression should expose four reasoning stages');
 assert.ok(pathway.note.includes('not a validated measure'),'case completion must not be presented as competence');
 assert.ok(html.includes('data-page="casepathway"') && html.includes('js/case-progression.js'),'case progression navigation/module missing');
-assert.ok(sw.includes('./js/case-progression.js') && sw.includes("const CACHE='mindplan-v2.40.0'"),'case progression must be cached offline and versioned');
+assert.ok(sw.includes('./js/case-progression.js') && sw.includes("const CACHE='mindplan-v2.40.1'"),'case progression must be cached offline and versioned');
 assert.ok(app.includes('function caseProgressionPage()') && app.includes('data-pathway-case'),'case progression UI/action integration missing');
 assert.ok(fs.existsSync(path.join(root,'docs/release16-pass4-clinical-case-progression.md')),'Pass 4 documentation missing');
 console.log('PASS: Release 16 Pass 4 case sequencing, completion derivation, reasoning stages, UI actions, source boundaries, and offline cache validated');
@@ -337,7 +337,7 @@ assert.ok(app.includes('300000') && app.includes('osceTimer') && app.includes('T
 assert.ok(app.includes('OSCE_RUBRIC') && app.includes('Structured reasoning') && app.includes('Source fidelity and boundaries') && app.includes('Monitoring and limitations'), 'four-domain OSCE rubric missing');
 assert.ok(app.includes('oralSaved.rubrics') && app.includes("mode:s.mode") && app.includes('rubrics:s.mode===\'osce\''), 'local OSCE rubric/session persistence missing');
 assert.ok(app.includes('No pass/fail threshold is applied') && app.includes('not a validated examination'), 'OSCE competency boundary missing');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Release 16 Pass 5 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Release 16 Pass 5 version/cache mismatch');
 console.log('PASS: Release 16 Pass 5 timed OSCE circuit, five-minute station timer, rubric, local session persistence, and interpretation safeguards validated');
 
 
@@ -346,7 +346,7 @@ assert.ok(html.includes('data-page="educator"') && html.includes('js/educator-mo
 assert.ok(app.includes('function educatorPage()') && app.includes('educatorPrint') && app.includes('educatorPreview'), 'educator workspace and print/preview actions missing');
 assert.ok(app.includes('Facilitator notes') && app.includes('Formative discussion / feedback') && app.includes('current local requirements'), 'facilitator guidance and source-boundary safeguards missing');
 assert.ok(app.includes('window.open') && app.includes('window.print()') && app.includes('Choose a case or station first'), 'print output and empty-selection guard missing');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Release 16 Pass 6 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Release 16 Pass 6 version/cache mismatch');
 assert.ok(fs.existsSync(path.join(root,'docs/release16-pass6-educator-mode.md')), 'Pass 6 documentation missing');
 console.log('PASS: Release 16 Pass 6 educator planning, case/station pack assembly, preview/print, privacy safeguards, and offline version/cache registration validated');
 
@@ -363,7 +363,7 @@ for (const script of scriptPaths) {
 }
 const pageRoutes = [...html.matchAll(/data-page="([^"]+)"/g)].map(m=>m[1]);
 for (const route of pageRoutes) assert.ok(app.includes(`page==='${route}'`) || route==='home' || app.includes(`page === '${route}'`), `navigation destination has no render route: ${route}`);
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'") && read('README.md').includes('v2.40.0 · October 2026 · Release 20 Pass 1'), 'current release metadata is inconsistent');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'") && read('README.md').includes('v2.40.1 · October 2026 · Release 20 Pass 2'), 'current release metadata is inconsistent');
 assert.ok(sw.includes('self.addEventListener(\'install\'') && sw.includes('self.addEventListener(\'activate\'') && sw.includes('self.addEventListener(\'fetch\''), 'service worker lifecycle handlers missing');
 assert.ok(app.includes('Private by design') || html.includes('Private by design'), 'privacy disclosure missing');
 assert.ok(read('docs/release16-pass7-integration-and-deployment-qa.md').includes('Manual deployment checklist'), 'manual browser QA boundary must be explicit');
@@ -390,7 +390,7 @@ assert.ok(crosswalk.some(t=>t.resources.topics.some(x=>x.id==='plan-purpose')),'
 assert.ok(crosswalk.every(t=>t.total===t.counts.topics+t.counts.cases+t.counts.questions+t.counts.stations),'resource totals should match category counts');
 assert.ok(html.includes('data-page="curriculum"')&&html.includes('js/curriculum-map.js'),'curriculum map navigation and script must be registered');
 assert.ok(app.includes("page==='curriculum')curriculumMapPage()")&&app.includes('function curriculumMapPage()'),'curriculum page route and renderer missing');
-assert.ok(sw.includes('./js/curriculum-map.js')&&sw.includes("const CACHE='mindplan-v2.40.0'"),'curriculum map must be cached under current version');
+assert.ok(sw.includes('./js/curriculum-map.js')&&sw.includes("const CACHE='mindplan-v2.40.1'"),'curriculum map must be cached under current version');
 assert.ok(read('docs/release17-pass1-curriculum-mapping.md').includes('keyword matching'),'mapping method and limits must be documented');
 console.log('PASS: Release 17 Pass 2 curriculum crosswalk, resource links, theme coverage, source-boundary notes, navigation, and offline cache validated');
 
@@ -407,7 +407,7 @@ assert.ok(app.includes('mindplan-educator-review-cycle-v1'), 'educator review-cy
 assert.ok(app.includes('cycleFollowupDate') && app.includes('cycleAddReflection'), 'follow-up planning/reflection controls missing');
 assert.ok(app.includes('mindplan-educator-review-cycle') && app.includes('cyclePrint'), 'review-cycle export/print workflow missing');
 assert.ok(app.includes('cycleClear') && app.includes('Delete all locally saved educator review-cycle records'), 'review-cycle local deletion missing');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Release 17 Pass 5 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Release 17 Pass 5 version/cache mismatch');
 
 
 // Release 17 Pass 6: educator follow-up dashboard
@@ -416,7 +416,7 @@ assert.ok(app.includes('cycleFilterDue') && app.includes('cycleFilterFollowed') 
 assert.ok(app.includes('overdue without reflection') || app.includes('Overdue · no reflection'), 'overdue-without-reflection status missing');
 assert.ok(app.includes("const cycleStatus=x=>") && app.includes("st==='followed'"), 'review-cycle status derivation missing');
 assert.ok(app.includes('does not establish that the goal was achieved') || read('docs/release17-pass6-educator-follow-up-dashboard.md').includes('does not establish that the goal was achieved'), 'dashboard interpretation limit missing');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'") && read('README.md').includes('Release 17 · Pass 6'), 'Release 17 Pass 6 version/cache/docs mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'") && read('README.md').includes('Release 17 · Pass 6'), 'Release 17 Pass 6 version/cache/docs mismatch');
 console.log('PASS: Release 17 Pass 6 educator follow-up dashboard, status rules, filters, privacy boundary, and cache metadata validated');
 
 
@@ -425,7 +425,7 @@ const versionMatch = html.match(/v(\d+\.\d+\.\d+) · October 2026/);
 assert.ok(versionMatch, 'visible app version metadata missing');
 const currentVersion = versionMatch[1];
 assert.ok(sw.includes(`const CACHE='mindplan-v${currentVersion}'`), 'service worker cache must match visible app version');
-assert.ok(read('README.md').includes(`v${currentVersion} · October 2026 · Release 20 Pass 1`), 'README current release metadata mismatch');
+assert.ok(read('README.md').includes(`v${currentVersion} · October 2026 · Release 20 Pass 2`), 'README current release metadata mismatch');
 assert.ok(read('README.md').includes('Release 17 · Pass 7 — Final integration and deployment QA'), 'Pass 7 historical release note missing');
 const scriptRefs = [...html.matchAll(/<script\s+src=["']([^"']+)["']/g)].map(m=>m[1]);
 for (const ref of scriptRefs) assert.ok(fs.existsSync(path.join(root, ref)), `index.html script reference missing: ${ref}`);
@@ -445,14 +445,14 @@ assert.ok(fs.existsSync(path.join(root,'tests/deployment-smoke.js')), 'deploymen
 assert.ok(fs.existsSync(path.join(root,'docs/release17-pass8-http-smoke-and-acceptance.md')), 'Pass 8 acceptance guide missing');
 assert.ok(read('README.md').includes('Release 17 · Pass 8 — HTTP deployment smoke test'), 'Pass 8 README release note missing');
 assert.ok(read('tests/deployment-smoke.js').includes('LIMIT: browser interaction'), 'smoke test must not overclaim browser QA');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Pass 8 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Pass 8 version/cache mismatch');
 console.log('PASS: Release 17 Pass 8 HTTP smoke harness, manual acceptance checklist, honest browser-testing boundary, and release metadata validated');
 
 // Release 18 Pass 1: audit all browser-local stores against backup/reset inventory.
 assert.ok(portability.DEFAULT_KEYS.includes('mindplan-educator-review-cycle-v1'), 'educator review-cycle store must participate in unified backup/import/reset');
 assert.ok(read('docs/release18-pass1-integration-audit.md').includes('unified learning-backup export'), 'Pass 1 audit finding and fix must be documented');
 assert.ok(read('README.md').includes('Release 18 · Pass 1 — Integration audit and local-data workflow'), 'Pass 1 README release note missing');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Release 18 Pass 1 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Release 18 Pass 1 version/cache mismatch');
 console.log('PASS: Release 18 Pass 1 local-data inventory regression, integration audit documentation, and version/cache metadata validated');
 
 // Release 18 Pass 2: strict backup validation, size limits, and rollback on storage failure.
@@ -468,7 +468,7 @@ assert.throws(()=>portability.applyBackup(fakeStorage,{a:{new:true},b:{new:true}
 assert.strictEqual(fakeStorage.getItem('a'),'old-a','failed import should restore prior value for earlier writes');
 assert.strictEqual(fakeStorage.getItem('b'),'old-b','failed import should preserve value for failed write');
 assert.ok(app.includes('MINDPLAN_PORTABILITY.applyBackup(localStorage,validated.stores)'), 'app must use transactional backup application');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Release 18 Pass 2 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Release 18 Pass 2 version/cache mismatch');
 console.log('PASS: Release 18 Pass 2 strict backup validation, data-size limits, transactional import rollback, and version/cache metadata validated');
 
 
@@ -517,7 +517,7 @@ console.log(`PASS: Release 18 Pass 3 full learning-data lifecycle fixtures; ${wo
 assert.ok(fs.existsSync(path.join(root,'docs/release18-pass4-browser-acceptance.md')), 'Pass 4 browser acceptance guide missing');
 assert.ok(read('README.md').includes('Release 18 · Pass 4 — Browser acceptance and deployment readiness'), 'Pass 4 README release note missing');
 assert.ok(read('docs/release18-pass4-browser-acceptance.md').includes('not passed'), 'blocked real-browser checks must not be reported as passed');
-assert.ok(html.includes('v2.40.0') && sw.includes("const CACHE='mindplan-v2.40.0'"), 'Pass 4 version/cache mismatch');
+assert.ok(html.includes('v2.40.1') && sw.includes("const CACHE='mindplan-v2.40.1'"), 'Pass 4 version/cache mismatch');
 console.log('PASS: Release 18 Pass 4 acceptance guide, version/cache consistency, and honest browser-test limitations validated');
 
 // Release 19 Pass 1: comprehensive Study Guide enrichment.
@@ -535,7 +535,7 @@ for (const topic of studyGuide.topics) {
   assert.ok(Array.isArray(topic.examFocus) && topic.examFocus.length >= 1, `topic ${topic.id} needs exam focus`);
 }
 assert.ok(app.includes('study-objectives') && app.includes('Deep study notes') && app.includes('Key distinctions'), 'Study Guide renderer must display enrichment sections');
-assert.ok(read('README.md').includes('v2.40.0 · October 2026 · Release 20 Pass 1'), 'current Release 19 metadata missing');
+assert.ok(read('README.md').includes('v2.40.1 · October 2026 · Release 20 Pass 2'), 'current Release 19 metadata missing');
 assert.ok(read('docs/release19-pass1-comprehensive-study-guide.md').includes('genuine study resource'), 'Release 19 documentation missing');
 console.log('PASS: Release 19 Pass 1 comprehensive Study Guide enrichment; all 11 topics have objectives, deep notes, distinctions, exam focus and source locators');
 
@@ -551,7 +551,7 @@ for (const topic of studyGuide.topics) {
   assert.ok(Array.isArray(topic.reviewPrompts) && topic.reviewPrompts.length >= 4, `topic ${topic.id} needs self-test prompts`);
 }
 assert.ok(app.includes('Source-derived facts to master') && app.includes('Self-test prompts'), 'deep Study Guide renderer sections missing');
-assert.ok(read('README.md').includes('v2.40.0 · October 2026 · Release 20 Pass 1'), 'current Release 19 Pass 2 metadata missing');
+assert.ok(read('README.md').includes('v2.40.1 · October 2026 · Release 20 Pass 2'), 'current Release 19 Pass 2 metadata missing');
 assert.ok(read('docs/release19-pass2-deep-study-guide.md').includes('supplied DOH/PCMH'), 'Pass 2 source-boundary documentation missing');
 console.log('PASS: Release 19 Pass 2 deep Study Guide layer; all 11 topics have source-derived facts and self-test prompts');
 assert.ok(fs.existsSync(path.join(root,'data/irr-study-guide.js')), 'IRR Study Guide data missing');
@@ -564,6 +564,6 @@ assert.ok(irrTopic.mustKnow?.length >= 4, 'IRR topic must include core facts');
 assert.ok(irrTopic.reviewPrompts?.length >= 5, 'IRR topic must include active-recall prompts');
 assert.ok(irrTopic.sections.some(s=>/Sections 31–39|Secs\. 31–39/.test(s.source||'')), 'IRR government-agency section missing');
 assert.ok(irrTopic.sections.some(s=>/Secs\. 8–14/.test(s.source||'')), 'IRR consent/safeguards section missing');
-console.log('PASS: Release 20 Pass 1 Mental Health Act IRR Study Guide; dedicated topic maps Sections 1–49 with disclosed external source trail');
+console.log('PASS: Release 20 Pass 2 Mental Health Act IRR Study Guide; dedicated topic maps Sections 1–49 with disclosed external source trail');
 
 
